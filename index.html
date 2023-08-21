@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="antialiased">
 
 <head>
   <meta charset="UTF-8">
@@ -54,10 +54,10 @@
       <div
         class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
         <i class='bx bx-search px-2'></i>
-        <input type="text" placeholder="Busque seus produtos"
+        <input type="text" placeholder="Busque por seus produtos..."
           class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
       </div>
-      
+
       <a href="#"
         class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos</a>
@@ -79,8 +79,30 @@
       </a>
     </header>
 
-    <main class="max-w-6xl border border-red-500 h-screen mx-auto">
+    <main class="max-w-6xl border border-red-500 h-screen mx-auto flex flex-col items-center gap-24">
+      <!-- Banner -->
+      <section
+        class="min-h-[260px] w-full bg-zinc-500/5 m-20 rounded-lg shadow-sm flex items-center justify-center gap-32">
+        <div class="">
+          <img src="./assets/images/bannerIMG.png" alt="Rações de gato" class="">
+        </div>
 
+        <div class="flex flex-col items-start">
+          <strong class="uppercase text-2xl">COMPRE</strong>
+          <span>Ração para gatos GranPlus 3kg</span>
+
+            <strong class="uppercase text-4xl mt-2">GANHE</strong>
+            <span class="">3 Sachês</span>
+
+          <button
+            class="bg-violet-500 text-white py-1 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase font-bold mt-3">
+            Eu quero
+          </button>
+        </div>
+      </section>
+
+      <!-- Produtos em destaque -->
+      <section></section>
     </main>
   </div>
 </body>
