@@ -33,8 +33,8 @@
 </head>
 
 <body>
-  <div class="min-h-screen max-w-[100vw] bg-white">
-    <header class="max-w-full px-40 py-6 bg-zinc-600/5 flex items-center justify-between shadow-md">
+  <div class="min-h-screen max-w-[100vw] bg-zinc-100">
+    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-between shadow-md">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,10 +79,9 @@
       </a>
     </header>
 
-    <main class="max-w-6xl border border-red-500 mx-auto flex flex-col gap-10">
+    <main class="max-w-6xl mx-auto flex flex-col gap-10">
       <!-- Banner -->
-      <section
-        class="min-h-[260px] w-full bg-zinc-500/5 mt-20 rounded-lg shadow-sm flex items-center justify-center gap-32">
+      <section class="min-h-[260px] w-full bg-white mt-20 rounded-lg shadow-sm flex items-center justify-center gap-32">
         <div class="">
           <img src="./assets/images/bannerIMG.png" alt="Rações de gato" class="">
         </div>
@@ -106,9 +105,10 @@
         <h2 class="text-2xl font-bold">Produtos disponíveis</h2>
 
         <!-- Primeira sessão produtos -->
-        <section class="flex gap-6">
+        <section class="flex gap-6 justify-center">
           <!-- card -->
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px]">
 
             <img src="./assets/images/racao1.png" alt="Imagem produto" class="max-w-[120px] max-h-[230px]">
 
@@ -125,7 +125,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px]">
 
             <img src="./assets/images/ração-seca-2.png" alt="Imagem produto" class="">
 
@@ -142,7 +143,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px]">
 
             <img src="./assets/images/racao-umida-1.png" alt="Imagem produto" class="">
 
@@ -159,7 +161,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px]">
 
             <img src="./assets/images/racao-umida-2.png" alt="Imagem produto" class="">
 
@@ -178,9 +181,10 @@
         </section>
 
         <!-- Segunda sessão produtos -->
-        <section class="flex gap-6">
+        <section class="flex gap-6 justify-center">
           <!-- card -->
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center bg-white px-5 pt-14 pb-8 rounded-md justify-between max-h-[470px]">
 
             <img src="./assets/images/racao1.png" alt="Imagem produto" class="max-w-[120px] max-h-[230px]">
 
@@ -197,7 +201,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center bg-white px-5 pt-14 pb-8 rounded-md justify-between max-h-[470px]">
 
             <img src="./assets/images/ração-seca-2.png" alt="Imagem produto" class="">
 
@@ -214,7 +219,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center bg-white px-5 pt-14 pb-8 rounded-md justify-between max-h-[470px]">
 
             <img src="./assets/images/racao-umida-1.png" alt="Imagem produto" class="">
 
@@ -231,7 +237,8 @@
 
           </div>
 
-          <div class="flex flex-col gap-4 items-center bg-zinc-200 px-5 pt-14 pb-8 rounded-md">
+          <div
+            class="flex flex-col gap-4 items-center bg-white px-5 pt-14 pb-8 rounded-md justify-between max-h-[470px]">
 
             <img src="./assets/images/racao-umida-2.png" alt="Imagem produto" class="">
 
@@ -251,6 +258,28 @@
 
       </section>
     </main>
+
+    <footer class="max-w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+      <!-- Logo -->
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_27_868)">
+            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+              fill="#9F75FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_27_868">
+              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <div class="flex flex-col items-end">
+        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
+      </div>
+    </footer>
   </div>
 </body>
 
