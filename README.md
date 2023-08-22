@@ -6,6 +6,7 @@ O projeto foi desenvolvido utilizando `HTML`, `Javascript` e `TailwindCSS`.
 
 Existem funções criadas no projeto apenas para demonstrar todas as páginas criadas, por exemplo a função `redirectToRandomPage()` que faz um sorteio randomico para redirecionar o usuário para a página de carrinho com produto ou sem produto.
 As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio dos itens ao carrinho para demonstrar como seria. Para está funcionalidade ter utilidade deve ser necessário armazenar o array de produtos adicionados nos cookies ou localStorage do usuário.
+A função presente no arquivo `user.js` serve para fazer a troca da imagem de perfil do usuário, utilizado apenas para demonstrar um funcionamento.
 
 
 <p align="center">
@@ -36,6 +37,11 @@ As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio do
    - **./pages/product3.html**: Página do produto 3.
    - **./pages/product4.html**: Página do produto 4.
    - **./pages/myFavorites.html**: Página de produtos favoritados pelo usuário.
+   - **./pages/user/profile.html**: Página contento o perfil do usuário, contento o histórico de compras dele.
+   - **./pages/user/editProfile.html**: Página em que o usuário pode modificar algumas informações.
+   - **./pages/user/myPets.html**: Página contento informações dos pets adicionados pelo usuário.
+
+
 
 3. **./index.html**: Este é o arquivo principal (página inicial) do site. É a primeira página que os visitantes verão quando acessarem o site.
 
