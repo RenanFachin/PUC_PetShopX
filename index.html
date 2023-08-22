@@ -36,7 +36,8 @@
   <div class="min-h-screen max-w-[100vw] bg-zinc-100">
     <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-between shadow-md">
       <!-- Logo -->
-      <a href="/index.html" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+      <a href="/index.html"
+        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_27_868)">
             <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
@@ -64,7 +65,7 @@
 
       <button
         class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-        onclick="window.location.href =  './pages/cart.html'" type="button">
+        id="cartButton" onclick="window.location.href =  './pages/cart.html'" type="button">
         <i class='bx bx-sm bx-cart'></i>
         Meus pedidos (0)
       </button>
@@ -118,11 +119,11 @@
 
             <span class="text-violet-600 text-xl font-medium">R$ 138,90</span>
 
-            <button
-              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-              type="button">
+            <button id="buyButtonProduct1"
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 buy-button"
+              type="button" data-product="product1">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -138,11 +139,11 @@
 
             <span class="text-violet-600 text-xl font-medium">R$ 169,90</span>
 
-            <button
-              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-              type="button">
+            <button id="buyButtonProduct2"
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 buy-button"
+              type="button" data-product="product2">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -162,7 +163,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -182,7 +183,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -206,7 +207,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -226,7 +227,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -246,7 +247,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -266,7 +267,7 @@
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
               type="button">
               <i class='bx bx-sm bx-cart'></i>
-              Comprar
+              Comprar (0)
             </button>
 
           </div>
@@ -297,6 +298,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="./assets/js/cart.js"></script>
 </body>
 
 </html>
