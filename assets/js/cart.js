@@ -11,18 +11,30 @@ function addItemToCart(product) {
   totalCartItens.push(product)
 
   // Fazendo a conferência sobre qual produto foi clicado
-  if (product === 'product1') {
+  // Como os produtos com id 1e5, 2e6, 3e7 e 4e8 são mesmos (motivo: finalidade de estudo) fiz os botões usarem o valor da mesma varíavel para atualizar
+  if (product === 'product1' || product === 'product5') {
     totalProduct1++
     updateBuyButton('buyButtonProduct1', totalProduct1)
-  } else if (product === 'product2') {
+    updateBuyButton('buyButtonProduct5', totalProduct1)
+  } else if (product === 'product2' ||  product ==='product6') {
     totalProduct2++
     updateBuyButton('buyButtonProduct2', totalProduct2)
+    updateBuyButton('buyButtonProduct6', totalProduct2)
+  } else if (product === 'product3' || product === 'product7') {
+    totalProduct3++
+    updateBuyButton('buyButtonProduct3', totalProduct3)
+    updateBuyButton('buyButtonProduct7', totalProduct3)
+  } else if (product === 'product4' || product ==='product8') {
+    totalProduct4++
+    updateBuyButton('buyButtonProduct4', totalProduct4)
+    updateBuyButton('buyButtonProduct8', totalProduct4)
   }
+
 
   // Fazendo o update do botão
   updateCartButton()
 
-  console.log(totalCartItens)
+  // console.log(totalCartItens)
 }
 
 function updateBuyButton(buttonId, total) {
@@ -33,6 +45,7 @@ function updateBuyButton(buttonId, total) {
   <i class='bx bx-sm bx-cart'></i>
   Comprar (${total})
   `
+
 }
 
 function updateCartButton() {
