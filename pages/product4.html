@@ -59,13 +59,14 @@
           class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
       </div>
 
-      <a href="#"
+      <a href="./myFavorites.html"
         class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
-        favoritos</a>
+        favoritos
+      </a>
 
-      <button id="cartButton" 
+      <button id="cartButton"
         class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-        onclick="window.location.href =  './cart.html'" type="button">
+        onclick="redirectToRandomPage()" type="button">
         <i class='bx bx-sm bx-cart'></i>
         Meus pedidos (0)
       </button>
@@ -140,7 +141,7 @@
             </div>
 
             <!-- deixando este produto como indisponível -->
-            <button 
+            <button
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-16 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 cursor-not-allowed disabled:bg-zinc-300"
               type="button" disabled>
               <i class='bx bx-sm bx-cart'></i>
@@ -153,7 +154,8 @@
             <span class="font-bold">Tamanhos: </span>
 
             <div class="flex gap-3 items-center">
-              <div class="rounded-full w-12 h-12 bg-violet-100 flex items-center justify-center text-sm line-through">85g
+              <div class="rounded-full w-12 h-12 bg-violet-100 flex items-center justify-center text-sm line-through">
+                85g
               </div>
             </div>
           </div>
@@ -163,17 +165,20 @@
             <span class="font-bold">Produtos similares: </span>
 
             <div class="flex items-center gap-5">
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product1.html'">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer"
+                onclick="window.location.href = './product1.html'">
                 <img src="../assets/images/racao1.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
 
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product2.html'">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer"
+                onclick="window.location.href = './product2.html'">
                 <img src="../assets/images/ração-seca-2.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
 
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product3.html'">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer"
+                onclick="window.location.href = './product3.html'">
                 <img src="../assets/images/racao-umida-1.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
@@ -238,6 +243,7 @@
   </div>
 
   <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/randomCartRedirect.js"></script>
 </body>
 
 </html>

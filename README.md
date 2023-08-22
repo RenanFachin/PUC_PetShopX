@@ -35,6 +35,7 @@ As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio do
    - **./pages/product2.html**: Página do produto 2.
    - **./pages/product3.html**: Página do produto 3.
    - **./pages/product4.html**: Página do produto 4.
+   - **./pages/myFavorites.html**: Página de produtos favoritados pelo usuário.
 
 3. **./index.html**: Este é o arquivo principal (página inicial) do site. É a primeira página que os visitantes verão quando acessarem o site.
 
@@ -45,7 +46,7 @@ As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio do
 - [x] Página Produtos
 - [x] Página Carrinho
 - [x] Página Carrinho Vazio
-- [] Página Produtos favoritos
+- [x] Página Produtos favoritos
 - [] Página de login
 
 ## Tecnologias Utilizadas

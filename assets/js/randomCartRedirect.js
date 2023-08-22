@@ -10,5 +10,5 @@ function redirectToRandomPage() {
   const targetPage = randomNumber < 0.5 ? cartPageWithProductsAdded : emptyCartPage
 
 
-  window.location.href = targetPage;
+  window.location.href = targetPage
 }

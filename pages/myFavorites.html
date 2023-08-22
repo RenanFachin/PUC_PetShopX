@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="antialiased">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop X - Aqui você encontra tudo para seu pet</title>
+  <!-- Script para adicionar tailwindcss ao projeto -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- script para extender algumas estilizações default do tailwindCSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        },
+        extend: {}
+      }
+    }
+  </script>
+
+  <!-- Link para o cdn do google para buscar fontes externas -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- BOX ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+  <div class="min-h-screen max-w-[100vw] bg-zinc-100">
+    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-evenly shadow-md">
+      <!-- Logo -->
+      <a href="/index.html"
+        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_27_868)">
+            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+              fill="#9F75FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_27_868">
+              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
+      <div
+        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+        <i class='bx bx-search px-2'></i>
+        <input type="text" placeholder="Busque por seus produtos..."
+          class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
+      </div>
+
+      <a href="#"
+        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
+        favoritos</a>
+
+      <button
+        class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+        onclick="window.location.href =  './cart.html'" type="button">
+        <i class='bx bx-sm bx-cart'></i>
+        Meus pedidos (0)
+      </button>
+
+      <a href="#"
+        class="cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
+        <img src="http://github.com/RenanFachin.png" alt="Foto de perfil do usuário" class="w-12 h-12 rounded-full">
+      </a>
+
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2">
+        <i class='bx bx-log-out bx-sm text-zinc-300 hover:text-zinc-500 cursor-pointer'></i>
+      </a>
+    </header>
+
+    <main class="max-w-6xl mx-auto flex flex-col">
+      <div class="flex items-center gap-2 my-20">
+        <i class='bx bx-star bx-md text-violet-400'></i>
+        <h2 class="font-bold text-zinc-800 text-2xl">Meus Favoritos</h2>
+      </div>
+
+
+      <div class="flex flex-col gap-5">
+        <!-- Card de cada produto -->
+        <!-- Favorito 1 -->
+        <div class="flex items-center justify-between border-b pb-5">
+          <img src="../assets/images/ração-seca-2.png" alt="">
+
+          <div class="flex flex-col items-start gap-1">
+            <span class="text-zinc-400">Ração seca</span>
+            <h3 class="font-bold">Ração Golden Gatos Castrados</h3>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-start">
+            <span class="line-through text-zinc-400">R$ 269,90</span>
+            <strong class="text-3xl text-violet-500 font-bold">R$ 138,90</strong>
+
+            <p class="text-zinc-400/80 text-sm">em até 2x de 84,95</p>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-center gap-4">
+            <p class="text-sm text-zinc-400">Quantidade</p>
+
+            <div class="flex items-center justify-center gap-4">
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="decreaseCount(this)">
+                <i class='bx bx-minus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+
+              <span class="count p-4 flex items-center justify-center bg-violet-300/20">1</span>
+
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="increaseCount(this)">
+                <i class='bx bx-plus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+            </div>
+
+            <div class="overflow-hidden">
+              <span id="alertMessage1" class="alert-message text-red-500 text-xs hidden transition-opacity">A quantidade mínima é 1</span>
+            </div>
+
+            <button
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+              id="cartButton" type="button">
+              <i class='bx bx-sm bx-cart'></i>
+              Comprar
+            </button>
+          </div>
+        </div>
+
+        <!-- Favorito 2 -->
+        <div class="flex items-center justify-between border-b pb-5">
+          <img src="../assets/images/ração-seca-2.png" alt="">
+
+          <div class="flex flex-col items-start gap-1">
+            <span class="text-zinc-400">Ração seca</span>
+            <h3 class="font-bold">Ração Golden Gatos Castrados</h3>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-start">
+            <span class="line-through text-zinc-400">R$ 269,90</span>
+            <strong class="text-3xl text-violet-500 font-bold">R$ 138,90</strong>
+
+            <p class="text-zinc-400/80 text-sm">em até 2x de 84,95</p>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-center gap-4">
+            <p class="text-sm text-zinc-400">Quantidade</p>
+
+            <div class="flex items-center justify-center gap-4">
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="decreaseCount(this)">
+                <i class='bx bx-minus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+
+              <span class="count p-4 flex items-center justify-center bg-violet-300/20">1</span>
+
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="increaseCount(this)">
+                <i class='bx bx-plus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+            </div>
+
+            <button
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+              id="cartButton" type="button">
+              <i class='bx bx-sm bx-cart'></i>
+              Comprar
+            </button>
+          </div>
+        </div>
+
+        <!-- Favorito 3 -->
+        <div class="flex items-center justify-between border-b pb-5">
+          <img src="../assets/images/ração-seca-2.png" alt="">
+
+          <div class="flex flex-col items-start gap-1">
+            <span class="text-zinc-400">Ração seca</span>
+            <h3 class="font-bold">Ração Golden Gatos Castrados</h3>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-start">
+            <span class="line-through text-zinc-400">R$ 269,90</span>
+            <strong class="text-3xl text-violet-500 font-bold">R$ 138,90</strong>
+
+            <p class="text-zinc-400/80 text-sm">em até 2x de 84,95</p>
+          </div>
+
+          <hr class="border-l-2 border-zinc-400/30 my-4 h-24">
+
+          <div class="flex flex-col items-center gap-4">
+            <p class="text-sm text-zinc-400">Quantidade</p>
+
+            <div class="flex items-center justify-center gap-4">
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="decreaseCount(this)">
+                <i class='bx bx-minus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+
+              <span class="count p-4 flex items-center justify-center bg-violet-300/20">1</span>
+
+              <button
+                class="outline-none text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                onclick="increaseCount(this)">
+                <i class='bx bx-plus bx-md text-violet-400 cursor-pointer'></i>
+              </button>
+            </div>
+
+            <button
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+              id="cartButton" type="button">
+              <i class='bx bx-sm bx-cart'></i>
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+      <!-- Logo -->
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_27_868)">
+            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+              fill="#9F75FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_27_868">
+              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <div class="flex flex-col items-end">
+        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/randomCartRedirect.js"></script>
+  <script src="../assets/js/favorites.js"></script>
+</body>
+
+</html>
