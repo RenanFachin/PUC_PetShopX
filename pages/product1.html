@@ -63,7 +63,7 @@
         class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos</a>
 
-      <button
+      <button id="cartButton" 
         class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
         onclick="window.location.href =  './cart.html'" type="button">
         <i class='bx bx-sm bx-cart'></i>
@@ -139,9 +139,9 @@
               <p class="text-zinc-400/80 text-sm">À vista no PIX com até 10 % de desconto</p>
             </div>
 
-            <button
-              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-16 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-              type="button">
+            <button id="buyButtonProduct1"
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-16 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 buy-button"
+              type="button" data-product="product1"> 
               <i class='bx bx-sm bx-cart'></i>
               Comprar
             </button>
@@ -164,17 +164,17 @@
             <span class="font-bold">Produtos similares: </span>
 
             <div class="flex items-center gap-5">
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product2.html'">
                 <img src="../assets/images/ração-seca-2.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
 
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product3.html'">
                 <img src="../assets/images/racao-umida-1.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
 
-              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md">
+              <div class="bg-violet-100/20 p-2 rounded-lg shadow-md cursor-pointer" onclick="window.location.href = './product4.html'">
                 <img src="../assets/images/racao-umida-2.png" alt="Imagem do produto"
                   class="max-w-[90px] max-h-[110px] w-auto h-auto">
               </div>
@@ -237,6 +237,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="../assets/js/cart.js"></script>
 </body>
 
 </html>

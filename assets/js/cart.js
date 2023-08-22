@@ -9,6 +9,9 @@ let totalProduct4 = 0 // Ração úmida GrabPlus
 function addItemToCart(product) {
   // Atualizando o total de itens no carrinho
   totalCartItens.push(product)
+  
+  // Fazendo o update do botão
+  updateCartButton()
 
   // Fazendo a conferência sobre qual produto foi clicado
   // Como os produtos com id 1e5, 2e6, 3e7 e 4e8 são mesmos (motivo: finalidade de estudo) fiz os botões usarem o valor da mesma varíavel para atualizar
@@ -31,8 +34,7 @@ function addItemToCart(product) {
   }
 
 
-  // Fazendo o update do botão
-  updateCartButton()
+  
 
   // console.log(totalCartItens)
 }
