@@ -2,7 +2,10 @@
 
 Construção de uma aplicação web de um petshop contendo serviços de venda de produtos e de serviços para animais de pequeno e grande porte.
 Esta aplicação deve ser possível realizar a busca e visualização dos produtos e serviços disponíveis cadastro de pet, cadastro de usuário e login no sistema. O sistema web deve atender os requisitos mínimos de qualidade de um sistema, atributos como usabilidade, funcionalidades, confiabilidade, eficiência e uma fácil manutenção devem estar presentes.
-O projeto foi desenvolvido utilizando HTML, Javascript e TailwindCSS.
+O projeto foi desenvolvido utilizando `HTML`, `Javascript` e `TailwindCSS`.
+
+Existem funções criadas no projeto apenas para demonstrar todas as páginas criadas, por exemplo a função `redirectToRandomPage()` que faz um sorteio randomico para redirecionar o usuário para a página de carrinho com produto ou sem produto.
+As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio dos itens ao carrinho para demonstrar como seria. Para está funcionalidade ter utilidade deve ser necessário armazenar o array de produtos adicionados nos cookies ou localStorage do usuário.
 
 
 <p align="center">
@@ -27,6 +30,7 @@ O projeto foi desenvolvido utilizando HTML, Javascript e TailwindCSS.
 2. **./pages**: Aqui estão as páginas HTML.
 
    - **./pages/cart.html**: Página do carrinho de compras, onde os produtos selecionados pelos usuários podem ser exibidos.
+   - **./pages/emptyCart.html**: Página do carrinho de compras, porém quando não tiver nenhum item adicionado.
    - **./pages/product1.html**: Página do produto 1.
    - **./pages/product2.html**: Página do produto 2.
    - **./pages/product3.html**: Página do produto 3.
@@ -39,8 +43,8 @@ O projeto foi desenvolvido utilizando HTML, Javascript e TailwindCSS.
 ## To-do
 - [x] Página Home
 - [x] Página Produtos
-- [] Página Carrinho
-- [] Página Carrinho Vazio
+- [x] Página Carrinho
+- [x] Página Carrinho Vazio
 - [] Página Produtos favoritos
 - [] Página de login
 
