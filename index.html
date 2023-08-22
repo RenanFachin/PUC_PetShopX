@@ -55,7 +55,10 @@
       <div
         class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
         <i class='bx bx-search px-2'></i>
-        <input type="text" placeholder="Busque por seus produtos..."
+
+        <!-- sr-only para deixar apenas visível para leitores de tela -->
+        <label for="search" class="sr-only">Busque por seus produtos</label>
+        <input id="search" type="text" placeholder="Busque por seus produtos..."
           class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
       </div>
 
