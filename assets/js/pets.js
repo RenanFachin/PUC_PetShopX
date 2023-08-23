@@ -92,13 +92,7 @@ function showToast() {
 
   } else {
 
-    // Criando uma forma de randomizar a aparência para melhor visualização dos estados da aplicação - Erro ou pet cadastrad com sucesso
-    // Gerando um número aleatório
-    const randomNumber = Math.random()
-
-    // Após o sorteio da constante randomNumber, fazendo um ternário para definir qual função será chamada
-    // desta forma estou simulando que 65% das vezes aparecerá acerto e 35% aparecerá erro
-    randomNumber < 0.65 ? showSuccessToastAlert() : showErrorAlertToast()
+    showSuccessToastAlert()
 
 
   }
