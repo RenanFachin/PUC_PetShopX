@@ -41,8 +41,6 @@ A função presente no arquivo `user.js` serve para fazer a troca da imagem de p
    - **./pages/user/editProfile.html**: Página em que o usuário pode modificar algumas informações.
    - **./pages/user/myPets.html**: Página contento informações dos pets adicionados pelo usuário.
 
-
-
 3. **./index.html**: Este é o arquivo principal (página inicial) do site. É a primeira página que os visitantes verão quando acessarem o site.
 
 4. **README.md**: Este é um arquivo de markdown criado para fornecer informações sobre o projeto.
@@ -53,13 +51,13 @@ A função presente no arquivo `user.js` serve para fazer a troca da imagem de p
 - [x] Página Carrinho
 - [x] Página Carrinho Vazio
 - [x] Página Produtos favoritos
-- [] Página de login
 
-## Tecnologias Utilizadas
+## Tecnologias e Ferramentas Utilizadas
 
-- **HTML**: Linguagem de marcação de hyper text
+- **FIGMA**: Ferramenta utilizada para criação de layouts.
+- **HTML**: Linguagem de marcação de hyper text.
 - **Tailwind CSS**: Um framework CSS utilitário que acelera o processo de estilização e torna as interfaces responsivas.
-- **Box icons**: Pacote de ícones utilizado no projeto
+- **Box icons**: Pacote de ícones utilizado no projeto.
 
 
 ## Como Usar
