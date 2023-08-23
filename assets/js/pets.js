@@ -39,52 +39,67 @@ function toggleAddButton() {
 }
 
 
+function showSuccessToastAlert() {
+  Toastify({
+    text: "Pet adicionado com sucesso!",
+    duration: 2000,
+    gravity: "bottom",
+    position: "right",
+    stopOnFocus: true,
+    close: true,
+    offset: {
+      x: 50,
+      y: 10
+    },
+    style: {
+      background: "linear-gradient(to right, #6633cc, #a64dff)"
+    },
+  }).showToast();
+}
+
+function showErrorAlertToast() {
+  Toastify({
+    text: "Ops! Algo de errado aconteceu ao cadastrar o seu pet",
+    duration: 2000,
+    gravity: "bottom",
+    position: "right",
+    stopOnFocus: true,
+    close: true,
+    offset: {
+      x: 50,
+      y: 10
+    },
+    style: {
+      background: "linear-gradient(to right,  #b30000, #ff4d4d)"
+    },
+  }).showToast();
+}
+
 // Criando função para criar um toast de notificação para o usuário após o submit do formulário
 function showToast() {
 
-  // Criando uma forma de randomizar a aparência para melhor visualização dos estados da aplicação - Erro ou pet cadastrad com sucesso
+  // O .value faz retornar o valor que consta no campo
+  var petName = document.getElementById("petName").value
+  var petBirthday = document.getElementById("petBirthday").value
+  var size = document.getElementById("size").value
 
-  // Gerando um número aleatório
-  const randomNumber = Math.random()
+  // Debbuging -> vendo se estão chegando os dados dos campos de input
+  console.log(petName, petBirthday, size)
 
-  // Após o sorteio da constante randomNumber, fazendo um ternário para definir qual função será chamada
-  // desta forma estou simulando que 65% das vezes aparecerá acerto e 35% aparecerá erro
-  randomNumber < 0.65 ? showSuccessToastAlert() : showErrorAlertToast()
+  // Validação dos campos required
+  if (petName === "" || petBirthday === "" || size === "") {
+    showErrorAlertToast()
 
-  function showSuccessToastAlert() {
-    Toastify({
-      text: "Pet adicionado com sucesso!",
-      duration: 2000,
-      gravity: "bottom",
-      position: "right",
-      stopOnFocus: true,
-      close: true,
-      offset: {
-        x: 50,
-        y: 10
-      },
-      style: {
-        background: "linear-gradient(to right, #6633cc, #a64dff)"
-      },
-    }).showToast();
+  } else {
+
+    // Criando uma forma de randomizar a aparência para melhor visualização dos estados da aplicação - Erro ou pet cadastrad com sucesso
+    // Gerando um número aleatório
+    const randomNumber = Math.random()
+
+    // Após o sorteio da constante randomNumber, fazendo um ternário para definir qual função será chamada
+    // desta forma estou simulando que 65% das vezes aparecerá acerto e 35% aparecerá erro
+    randomNumber < 0.65 ? showSuccessToastAlert() : showErrorAlertToast()
+
+
   }
-
-  function showErrorAlertToast() {
-    Toastify({
-      text: "Ops! Algo de errado aconteceu ao cadastrar o seu pet",
-      duration: 2000,
-      gravity: "bottom",
-      position: "right",
-      stopOnFocus: true,
-      close: true,
-      offset: {
-        x: 50,
-        y: 10
-      },
-      style: {
-        background: "linear-gradient(to right,  #b30000, #ff4d4d)"
-      },
-    }).showToast();
-  }
-
 }

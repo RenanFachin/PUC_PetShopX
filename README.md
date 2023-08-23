@@ -7,6 +7,7 @@ O projeto foi desenvolvido utilizando `HTML`, `Javascript` e `TailwindCSS`.
 Existem funções criadas no projeto apenas para demonstrar todas as páginas criadas, por exemplo a função `redirectToRandomPage()` que faz um sorteio randomico para redirecionar o usuário para a página de carrinho com produto ou sem produto.
 As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio dos itens ao carrinho para demonstrar como seria. Para está funcionalidade ter utilidade deve ser necessário armazenar o array de produtos adicionados nos cookies ou localStorage do usuário.
 A função presente no arquivo `user.js` serve para fazer a troca da imagem de perfil do usuário, utilizado apenas para demonstrar um funcionamento.
+No arquivo `pet.js` possui algumas funções e listeners para fazer toggle de seleção de card dos pets e para ativar botões/formulários na página.
 
 
 <p align="center">
@@ -58,6 +59,7 @@ A função presente no arquivo `user.js` serve para fazer a troca da imagem de p
 - **HTML**: Linguagem de marcação de hyper text.
 - **Tailwind CSS**: Um framework CSS utilitário que acelera o processo de estilização e torna as interfaces responsivas.
 - **Box icons**: Pacote de ícones utilizado no projeto.
+- **Toastify-js**: Biblioteca javascript para adicionar toast notifications à página.
 
 
 ## Como Usar

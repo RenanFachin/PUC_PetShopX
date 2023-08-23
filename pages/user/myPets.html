@@ -35,6 +35,7 @@
     }
   </style>
 
+
   <!-- Link para o cdn do google para buscar fontes externas -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -337,7 +338,7 @@
 
             <div id="formContainer"
               class="ml-10 p-6 bg-gray-100 rounded-lg shadow-sm bg-violet-500/5 hidden opacity-0 transition-opacity duration-700 ease-in-out">
-              <form class="flex flex-col items-start gap-3">
+              <form id="petForm" class="flex flex-col items-start gap-3">
                 <div class="flex flex-col w-full gap-1">
                   <label for="petName" class="text-violet-400 text-xs">Nome do pet</label>
                   <input id="petName" type="text" required
@@ -356,7 +357,7 @@
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
-                <div class="flex flex-col w-full gap-1">
+                <div class="flex flex-col w-full gap-1 ">
                   <label for="size" class="text-violet-400 text-xs">Porte</label>
                   <select id="size"
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none"
@@ -366,6 +367,8 @@
                     <option value="large">Grande</option>
                   </select>
                 </div>
+
+
               </form>
             </div>
 
@@ -405,6 +408,7 @@
   <script src="../../assets/js/pets.js"></script>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 
 </html>
