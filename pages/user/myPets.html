@@ -157,7 +157,7 @@
 
           <!-- PET 1 -->
           <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer">
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
             <div class="flex items-center gap-10">
               <div class="flex flex-col items-center gap-6 text-zinc-500">
                 <img src="../../assets/images/Pet1.jpeg" alt="Imagem do pet"
@@ -207,7 +207,7 @@
 
           <!-- PET 2 -->
           <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer">
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
             <div class="flex items-center gap-10">
               <div class="flex flex-col items-center gap-6 text-zinc-500">
                 <img src="../../assets/images/Pet2.jpeg" alt="Imagem do pet"
@@ -257,7 +257,7 @@
 
           <!-- Pet 3 -->
           <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer">
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
             <div class="flex items-center gap-10">
               <div class="flex flex-col items-center gap-6 text-zinc-500">
                 <img src="../../assets/images/pet3.PNG" alt="Imagem do pet" class="w-32 h-32 rounded-full object-cover">
@@ -307,8 +307,8 @@
           <!-- Card de novo pet (Simulando um espaço vazio) -->
 
           <div
-            class="bg-[#9F75FF]/5 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-center w-full">
-            <div class="flex items-center  gap-10">
+            class="bg-[#9F75FF]/5 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-center gap-8 w-full">
+            <div class="flex flex-col items-center  gap-10">
               <div class="flex items-center gap-6 text-zinc-500">
                 <button id="dogButton"
                   class="w-32 h-32 flex items-center justify-center rounded-full border border-violet-600/30 animal-card focus:ring-2 focus:ring-violet-400 focus:rounded-full outline-none focus:ring-offset-2">
@@ -320,16 +320,43 @@
                   <i class='bx bxs-cat bx-md border-violet-600/30'></i>
                 </button>
               </div>
-
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:bg-violet-200 uppercase"
-                type="button" disabled id="addButton">
-                Adicionar
-              </button>
-
-
             </div>
+
+
+            <div id="formContainer" class="ml-10 p-6 bg-gray-100 rounded-lg shadow-sm bg-violet-500/5 hidden">
+              <form class="flex flex-col items-start gap-1">
+                <div class="flex flex-col w-full">
+                  <label for="petName">Nome do pet</label>
+                  <input id="petName" type="text">
+                </div>
+
+                <div class="flex flex-col w-full">
+                  <label for="petBirthday">Data de nascimento</label>
+                  <input id="petBirthday" type="date">
+                </div>
+
+                <div class="flex flex-col w-full">
+                  <label for="nickname">Apelido(s)</label>
+                  <input id="nickname" type="text">
+                </div>
+
+                <div class="flex flex-col w-full">
+                  <label for="size">Porte</label>
+                  <select id="size" class="w-full">
+                    <option value="small">Pequeno</option>
+                    <option value="medium">Médio</option>
+                    <option value="large">Grande</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+
+            <button
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:bg-violet-200 uppercase"
+              type="submit" disabled id="addButton">
+              Adicionar
+            </button>
+
         </section>
       </div>
     </main>
