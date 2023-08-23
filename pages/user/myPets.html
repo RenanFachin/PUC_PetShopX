@@ -27,6 +27,14 @@
     }
   </script>
 
+  <!-- Implementando uma estilização extra para a classe .animal-card:active que é adicionada com a o evento de clique no card do pet -->
+  <style>
+    .animal-card.active {
+      background-color: rgb(159 117 255 / 0.2);
+      border: #6D28D9 2px solid;
+    }
+  </style>
+
   <!-- Link para o cdn do google para buscar fontes externas -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -140,10 +148,146 @@
 
           </div>
         </section>
+
+        <section class="flex flex-col items-start gap-5">
+          <div class="flex items-center justify-center gap-4">
+            <i class='bx bxs-cat bx-md text-violet-500'></i>
+            <h3 class="text-2xl">Meus PETS</h3>
+          </div>
+
+          <!-- PET 1 -->
+          <div
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card">
+            <div class="flex items-center gap-10">
+              <div class="flex flex-col items-center gap-6 text-zinc-500">
+                <img src="../../assets/images/Pet1.jpeg" alt="Imagem do pet"
+                  class="w-32 h-32 rounded-full object-cover">
+
+                <strong
+                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">APOLO</strong>
+              </div>
+
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
+                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
+                </p>
+                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Apoquico, Abolinha,
+                    Apolinho</span></p>
+                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
+                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Banho
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Tosa
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Consulta
+              </button>
+            </div>
+          </div>
+
+          <!-- PET 2 -->
+          <div
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card">
+            <div class="flex items-center gap-10">
+              <div class="flex flex-col items-center gap-6 text-zinc-500">
+                <img src="../../assets/images/Pet2.jpeg" alt="Imagem do pet"
+                  class="w-32 h-32 rounded-full object-cover">
+
+                <strong
+                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">MOMOA</strong>
+              </div>
+
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
+                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
+                </p>
+                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Momoinha</span></p>
+                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
+                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Banho
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Tosa
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Consulta
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card">
+            <div class="flex items-center gap-10">
+              <div class="flex flex-col items-center gap-6 text-zinc-500">
+                <img src="../../assets/images/pet3.PNG" alt="Imagem do pet" class="w-32 h-32 rounded-full object-cover">
+
+                <strong
+                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">TOM</strong>
+              </div>
+
+              <div class="flex flex-col items-start gap-2">
+                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
+                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
+                </p>
+                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Totones, Tonico, Tomzera,
+                    Tom zé,</span></p>
+                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
+                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Banho
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Tosa
+              </button>
+
+              <button
+                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+                id="cartButton" onclick="redirectToRandomPage()" type="button">
+                Marcar Consulta
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
-    <footer class="w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10 fixed bottom-0">
+    <footer class="w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,6 +311,7 @@
   </div>
 
   <script src="../../assets/js/user.js"></script>
+  <script src="../../assets/js/pets.js"></script>
 </body>
 
 </html>
