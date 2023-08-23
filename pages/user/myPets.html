@@ -323,26 +323,26 @@
             </div>
 
 
-            <div id="formContainer" class="ml-10 p-6 bg-gray-100 rounded-lg shadow-sm bg-violet-500/5 hidden">
-              <form class="flex flex-col items-start gap-1">
-                <div class="flex flex-col w-full">
-                  <label for="petName">Nome do pet</label>
-                  <input id="petName" type="text">
+            <div id="formContainer" class="ml-10 p-6 bg-gray-100 rounded-lg shadow-sm bg-violet-500/5 hidden opacity-0 transition-opacity duration-700 ease-in-out">
+              <form class="flex flex-col items-start gap-3">
+                <div class="flex flex-col w-full gap-1">
+                  <label for="petName" class="text-violet-400 text-xs">Nome do pet</label>
+                  <input id="petName" type="text" class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
-                <div class="flex flex-col w-full">
-                  <label for="petBirthday">Data de nascimento</label>
-                  <input id="petBirthday" type="date">
+                <div class="flex flex-col w-full gap-1">
+                  <label for="petBirthday" class="text-violet-400 text-xs">Data de nascimento</label>
+                  <input id="petBirthday" type="date" class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
-                <div class="flex flex-col w-full">
-                  <label for="nickname">Apelido(s)</label>
-                  <input id="nickname" type="text">
+                <div class="flex flex-col w-full gap-1">
+                  <label for="nickname" class="text-violet-400 text-xs">Apelido(s)</label>
+                  <input id="nickname" type="text" class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
-                <div class="flex flex-col w-full">
-                  <label for="size">Porte</label>
-                  <select id="size" class="w-full">
+                <div class="flex flex-col w-full gap-1">
+                  <label for="size" class="text-violet-400 text-xs">Porte</label>
+                  <select id="size" class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                     <option value="small">Pequeno</option>
                     <option value="medium">Médio</option>
                     <option value="large">Grande</option>

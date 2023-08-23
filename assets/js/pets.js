@@ -27,10 +27,13 @@ function toggleAddButton() {
   // Função de toggle, ou seja, se active fazer virar disabled, e o contrário também
   if (dogButton.classList.contains('active') || catButton.classList.contains('active')) {
     addButton.removeAttribute('disabled')
-    formContainer.style.display = 'block'
 
-  } else {
-    addButton.setAttribute('disabled', true)
-    formContainer.style.display = 'none'
+    // formContainer.style.display = 'block'
+    formContainer.classList.remove('hidden')
+
+    setTimeout(() => {
+      formContainer.classList.remove('opacity-0')
+    }, 10)
+
   }
 }
