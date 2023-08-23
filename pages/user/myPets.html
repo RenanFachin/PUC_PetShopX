@@ -38,6 +38,8 @@
   <!-- Link para o cdn do google para buscar fontes externas -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Toast Notification Lib - toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
   <!-- BOX ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -338,13 +340,13 @@
               <form class="flex flex-col items-start gap-3">
                 <div class="flex flex-col w-full gap-1">
                   <label for="petName" class="text-violet-400 text-xs">Nome do pet</label>
-                  <input id="petName" type="text"
+                  <input id="petName" type="text" required
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
                 <div class="flex flex-col w-full gap-1">
                   <label for="petBirthday" class="text-violet-400 text-xs">Data de nascimento</label>
-                  <input id="petBirthday" type="date"
+                  <input id="petBirthday" type="date" required
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
 
@@ -357,7 +359,8 @@
                 <div class="flex flex-col w-full gap-1">
                   <label for="size" class="text-violet-400 text-xs">Porte</label>
                   <select id="size"
-                    class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+                    class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none"
+                    required>
                     <option value="small">Pequeno</option>
                     <option value="medium">Médio</option>
                     <option value="large">Grande</option>
@@ -368,7 +371,7 @@
 
             <button
               class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 disabled:cursor-not-allowed disabled:bg-violet-200 uppercase"
-              type="submit" disabled id="addButton">
+              type="submit" disabled id="addButton" onclick=showToast()>
               Adicionar
             </button>
         </section>
@@ -400,6 +403,8 @@
 
   <script src="../../assets/js/user.js"></script>
   <script src="../../assets/js/pets.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
