@@ -9,7 +9,7 @@ let totalProduct4 = 0 // Ração úmida GrabPlus
 function addItemToCart(product) {
   // Atualizando o total de itens no carrinho
   totalCartItens.push(product)
-  
+
   // Fazendo o update do botão
   updateCartButton()
 
@@ -19,7 +19,7 @@ function addItemToCart(product) {
     totalProduct1++
     updateBuyButton('buyButtonProduct1', totalProduct1)
     updateBuyButton('buyButtonProduct5', totalProduct1)
-  } else if (product === 'product2' ||  product ==='product6') {
+  } else if (product === 'product2' || product === 'product6') {
     totalProduct2++
     updateBuyButton('buyButtonProduct2', totalProduct2)
     updateBuyButton('buyButtonProduct6', totalProduct2)
@@ -27,14 +27,14 @@ function addItemToCart(product) {
     totalProduct3++
     updateBuyButton('buyButtonProduct3', totalProduct3)
     updateBuyButton('buyButtonProduct7', totalProduct3)
-  } else if (product === 'product4' || product ==='product8') {
+  } else if (product === 'product4' || product === 'product8') {
     totalProduct4++
     updateBuyButton('buyButtonProduct4', totalProduct4)
     updateBuyButton('buyButtonProduct8', totalProduct4)
   }
 
+  showSuccessToastAlert()
 
-  
 
   // console.log(totalCartItens)
 }
@@ -73,3 +73,20 @@ buyButtons.forEach(function (button) {
   })
 })
 
+function showSuccessToastAlert() {
+  Toastify({
+    text: "Produto adicionado ao carrinho!",
+    duration: 2000,
+    gravity: "bottom",
+    position: "right",
+    stopOnFocus: true,
+    close: true,
+    offset: {
+      x: 50,
+      y: 10
+    },
+    style: {
+      background: "linear-gradient(to right, #6633cc, #a64dff)"
+    },
+  }).showToast()
+}
