@@ -158,157 +158,9 @@
             <h3 class="text-2xl">Meus PETS</h3>
           </div>
 
-          <!-- PET 1 -->
-          <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
-            <div class="flex items-center gap-10">
-              <div class="flex flex-col items-center gap-6 text-zinc-500">
-                <img src="../../assets/images/Pet1.jpeg" alt="Imagem do pet"
-                  class="w-32 h-32 rounded-full object-cover">
-
-                <strong
-                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">APOLO</strong>
-              </div>
-
-              <div class="flex flex-col items-start gap-2">
-                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
-                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
-                </p>
-                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Apoquico, Abolinha,
-                    Apolinho</span></p>
-                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
-                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Banho
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Tosa
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Consulta
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Modificar dados
-              </button>
-            </div>
+          <div id="petContainer" class="flex flex-col items-start gap-5 w-full">
+            <!-- Conteúdo será gerado pelo JS ao percorrer o array de pets -->
           </div>
-
-          <!-- PET 2 -->
-          <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
-            <div class="flex items-center gap-10">
-              <div class="flex flex-col items-center gap-6 text-zinc-500">
-                <img src="../../assets/images/Pet2.jpeg" alt="Imagem do pet"
-                  class="w-32 h-32 rounded-full object-cover">
-
-                <strong
-                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">MOMOA</strong>
-              </div>
-
-              <div class="flex flex-col items-start gap-2">
-                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
-                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
-                </p>
-                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Momoinha</span></p>
-                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
-                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Banho
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Tosa
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Consulta
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Consulta
-              </button>
-            </div>
-          </div>
-
-
-          <!-- Pet 3 -->
-          <div
-            class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
-            <div class="flex items-center gap-10">
-              <div class="flex flex-col items-center gap-6 text-zinc-500">
-                <img src="../../assets/images/pet3.PNG" alt="Imagem do pet" class="w-32 h-32 rounded-full object-cover">
-
-                <strong
-                  class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">TOM</strong>
-              </div>
-
-              <div class="flex flex-col items-start gap-2">
-                <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">SRD</span></p>
-                <p class="text-zinc-400">Data de nascimento: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span>
-                </p>
-                <p class="text-zinc-400">Apelidos: <span class="text-zinc-500/70 font-bold">Totones, Tonico, Tomzera,
-                    Tom zé,</span></p>
-                <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">Pequeno</span></p>
-                <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">xx/xx/xxxx</span></p>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Banho
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Tosa
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Consulta
-              </button>
-
-              <button
-                class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-8 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-                type="button">
-                Marcar Consulta
-              </button>
-            </div>
-          </div>
-
-
-
         </section>
 
         <section class="flex flex-col items-start gap-5">
@@ -352,7 +204,7 @@
                 </div>
 
                 <div class="flex flex-col w-full gap-1">
-                  <label for="nickname" class="text-violet-400 text-xs">Apelido(s)</label>
+                  <label for="nickname" class="text-violet-400 text-xs">Apelido</label>
                   <input id="nickname" type="text"
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
                 </div>
@@ -362,9 +214,9 @@
                   <select id="size"
                     class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none"
                     required>
-                    <option value="small">Pequeno</option>
-                    <option value="medium">Médio</option>
-                    <option value="large">Grande</option>
+                    <option value="Pequeno">Pequeno</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Grande">Grande</option>
                   </select>
                 </div>
 
@@ -377,6 +229,7 @@
               type="submit" disabled id="addButton" onclick=showToast()>
               Adicionar
             </button>
+          </div>
         </section>
       </div>
     </main>
@@ -406,6 +259,7 @@
 
   <script src="../../assets/js/user.js"></script>
   <script src="../../assets/js/pets.js"></script>
+  <script src="../../assets/js/createPetCard.js"></script>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
