@@ -4,10 +4,17 @@ Construção de uma aplicação web de um petshop contendo serviços de venda de
 Esta aplicação deve ser possível realizar a busca e visualização dos produtos e serviços disponíveis cadastro de pet, cadastro de usuário e login no sistema. O sistema web deve atender os requisitos mínimos de qualidade de um sistema, atributos como usabilidade, funcionalidades, confiabilidade, eficiência e uma fácil manutenção devem estar presentes.
 O projeto foi desenvolvido utilizando `HTML`, `Javascript` e `TailwindCSS`.
 
-Existem funções criadas no projeto apenas para demonstrar todas as páginas criadas, por exemplo a função `redirectToRandomPage()` que faz um sorteio randomico para redirecionar o usuário para a página de carrinho com produto ou sem produto.
-As funções presentes no arquivo `cart.js` elas fazem o incremento fícticio dos itens ao carrinho para demonstrar como seria. Para está funcionalidade ter utilidade deve ser necessário armazenar o array de produtos adicionados nos cookies ou localStorage do usuário.
-A função presente no arquivo `user.js` serve para fazer a troca da imagem de perfil do usuário, utilizado apenas para demonstrar um funcionamento.
-No arquivo `pet.js` possui algumas funções e listeners para fazer toggle de seleção de card dos pets e para ativar botões/formulários na página.
+No projeto, foram implementadas várias funções com o propósito de demonstrar todas as páginas criadas. Por exemplo, temos a função `redirectToRandomPage()`, que realiza um sorteio aleatório para redirecionar o usuário para a página de carrinho, com ou sem produtos, mostrando assim os diferentes estados da aplicação.
+
+No arquivo `cart.js`, as funções presentes simulam o incremento fictício de itens no carrinho, visando apenas a demonstração do conceito. Para tornar essa funcionalidade útil, é recomendado armazenar o array de produtos adicionados nos cookies ou no armazenamento local do usuário.
+
+No `user.js`, a função disponível permite a troca da imagem de perfil do usuário. Essa funcionalidade é implementada apenas para fins de demonstração de funcionamento, visto que seria necessário termos um database para armazenar as informações.
+
+No arquivo `pet.js`, são encontradas funções e listeners que permitem alternar a seleção de cards de pets, além de ativar botões e formulários na página.
+
+A geração dos elementos HTML dos cards de pets é tratada pela função `renderizarPetCard()` no arquivo `createPetCard.js`. Essa função possibilita a criação de vários cards a partir de um array de objetos, possibilitando a manipulação destes dados de maneira mais dinâmica.
+
+Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL. Por exemplo, ao utilizar a URL `href="./pages/product.html?id=product4"`, o arquivo `productGeneratePage.js` captura os parâmetros de consulta e, com eles, percorre o objeto de produtos. A partir daí, os detalhes do produto são dinamicamente renderizados em tela.
 
 
 <p align="center">
@@ -21,6 +28,8 @@ No arquivo `pet.js` possui algumas funções e listeners para fazer toggle de se
 - [To-Do](#to-do)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Usar](#como-usar)
+- [Adicionando novos pets](#adicionando-novos-pets)
+- [Adicionando novos produtos](#adicionando-novos-produtos)
 - [Autor](#autor)
 
 ## Estrutura de Pasta
@@ -33,10 +42,7 @@ No arquivo `pet.js` possui algumas funções e listeners para fazer toggle de se
 
    - **./pages/cart.html**: Página do carrinho de compras, onde os produtos selecionados pelos usuários podem ser exibidos.
    - **./pages/emptyCart.html**: Página do carrinho de compras, porém quando não tiver nenhum item adicionado.
-   - **./pages/product1.html**: Página do produto 1.
-   - **./pages/product2.html**: Página do produto 2.
-   - **./pages/product3.html**: Página do produto 3.
-   - **./pages/product4.html**: Página do produto 4.
+   - **./pages/product.html/id=product**: Página do produto, para utiliza-lá é necessário passar um QUERY PARAMETERS na rota.
    - **./pages/myFavorites.html**: Página de produtos favoritados pelo usuário.
    - **./pages/user/profile.html**: Página contento o perfil do usuário, contento o histórico de compras dele.
    - **./pages/user/editProfile.html**: Página em que o usuário pode modificar algumas informações.
@@ -48,10 +54,13 @@ No arquivo `pet.js` possui algumas funções e listeners para fazer toggle de se
 
 ## To-do
 - [x] Página Home
-- [x] Página Produtos
-- [x] Página Carrinho
-- [x] Página Carrinho Vazio
-- [x] Página Produtos favoritos
+- [x] Página de Produtos
+- [x] Página de Carrinho
+- [x] Página de Carrinho Vazio
+- [x] Página de Produtos favoritos
+- [x] Página de meus pets
+- [x] Página de perfil do usuário
+- [x] Página de edição de dados do usuário 
 
 ## Tecnologias e Ferramentas Utilizadas
 
@@ -71,6 +80,52 @@ git clone https://github.com/RenanFachin/PUC_PetShopX.git
 ```
 
 2. Acesse a aplicação em seu navegador a partir do arquivo index.html
+
+## Adicionando novos pets
+No arquivo `createPetCard.js` possuímos um array contendo objetos que representam os pets, com as seguintes propriedades.
+
+```js
+  {
+    nome: 'Apolo',
+    raça: 'SRC',
+    petImage: '../../assets/images/Pet1.jpeg',
+    dataDeNascimento: 'xx/xx/xxx',
+    apelidos: 'Apoquico, Abolinha, Apolinho',
+    porte: 'Pequeno',
+    ultimaConsulta: 'xx/xx/xxx',
+  },
+```
+
+Para adicionar um novo pet basta criar um novo objeto e adicionar as propriedades listadas acima e então, ao fazer o reload da tela, teremos os cards do total de pets presente neste array criado na tela.
+
+## Adicionando novos produtos
+No arquivo `productGeneratePage.js` possuímos um objeto contendo as propriedades de um produto.
+Conforme modelo abaixo.
+
+```js
+const productsData = {
+  'product1': {
+    produto: 'Ração GranPlus Choice Gatos',
+    preco: '138,90',
+    precoSemDesconto: '269,90',
+    avaliacoes: '120',
+    status: 'Em estoque',
+    imagemProduto: '../assets/images/racao1.png',
+    tamanhos: '10.1kg',
+    tipoRacao: 'Premium Especial',
+    indicadoPara: 'Todas as Raças',
+    indicadoParaPorte: 'Filhote, Adulto, Sênior',
+    produtoSimilar1: '../assets/images/ração-seca-2.png',
+    produtoSimilar2: '../assets/images/racao-umida-1.png',
+    produtoSimilar3: '../assets/images/racao-umida-2.png',
+    redirectProdutoSimilar2: 'id=product2',
+    redirectProdutoSimilar3: 'id=product3',
+    redirectProdutoSimilar4: 'id=product4',
+  }
+}
+```
+
+Para adicionar um novo produto basta criar um novo objeto e adicionar as propriedades listadas acima e então, é só acessar `pages/product.html/id=NOMEDONOVOOBJETO`
 
 ## Autor
 - [Renan Fachin](https://github.com/RenanFachin/)
