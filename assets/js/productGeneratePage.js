@@ -371,3 +371,4 @@ if (productId && productsData[productId]) {
   `
 }
 
+console.log(productsData)

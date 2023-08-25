@@ -14,7 +14,7 @@ No arquivo `pet.js`, são encontradas funções e listeners que permitem alterna
 
 A geração dos elementos HTML dos cards de pets é tratada pela função `renderizarPetCard()` no arquivo `createPetCard.js`. Essa função possibilita a criação de vários cards a partir de um array de objetos, possibilitando a manipulação destes dados de maneira mais dinâmica.
 
-Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL. Por exemplo, ao utilizar a URL `href="./pages/product.html?id=product4"`, o arquivo `productGeneratePage.js` captura os parâmetros de consulta e, com eles, percorre o objeto de produtos. A partir daí, os detalhes do produto são dinamicamente renderizados em tela.
+Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL. Por exemplo, ao utilizar a URL `href="./pages/product.html?id=product4"`, o arquivo `productGeneratePage.js` captura os parâmetros de consulta e, com eles, percorre o objeto de produtos. A partir daí, os detalhes do produto são dinamicamente renderizados em tela. Isto aplica conceitos parecidos com o de uma SPA (single page application)
 
 
 <p align="center">
