@@ -16,6 +16,8 @@ A geração dos elementos HTML dos cards de pets é tratada pela função `rende
 
 Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL. Por exemplo, ao utilizar a URL `href="./pages/product.html?id=product4"`, o arquivo `productGeneratePage.js` captura os parâmetros de consulta e, com eles, percorre o objeto de produtos. A partir daí, os detalhes do produto são dinamicamente renderizados em tela. Isto aplica conceitos parecidos com o de uma SPA (single page application)
 
+Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validações de dados com o auxilio da função `submitRegisterForm()`, esta função, simula uma conexão com um banco de dados, por isso o motivo do setTimeOut e do array de usuários. Mostra o toast de notificação quando o usuário preenche todos os dados corretamente.
+
 
 <p align="center">
   <img src="./public/previewHomePage.PNG" alt="Exemplo da Aplicação em DarkMode">
@@ -40,6 +42,7 @@ Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL.
 
 2. **./pages**: Aqui estão as páginas HTML.
 
+   - **./pages/register.html**: Página destinada ao registro de um usuário no sistema.
    - **./pages/cart.html**: Página do carrinho de compras, onde os produtos selecionados pelos usuários podem ser exibidos.
    - **./pages/emptyCart.html**: Página do carrinho de compras, porém quando não tiver nenhum item adicionado.
    - **./pages/product.html/id=product**: Página do produto, para utiliza-lá é necessário passar um QUERY PARAMETERS na rota.
@@ -54,6 +57,7 @@ Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL.
 
 ## To-do
 - [x] Página Home
+- [x] Página de registro
 - [x] Página de Produtos
 - [x] Página de Carrinho
 - [x] Página de Carrinho Vazio
@@ -80,6 +84,11 @@ git clone https://github.com/RenanFachin/PUC_PetShopX.git
 ```
 
 2. Acesse a aplicação em seu navegador a partir do arquivo index.html
+
+## Criando usuário
+Na página /pages/register.html, será possível verificar como seria a criação de usuário, o form consta com campos de tipo text, date, email, checkbox.
+Para que fosse possível fazer a simulação, existe uma função que verifica a consistência dos dados, adiciona à um array de usuários e simula uma conexão de 4000ms com o banco de dados. Neste tempo de 4000ms o formulário fica desabilitado para evitar uma multiplos submits.
+
 
 ## Adicionando novos pets
 No arquivo `createPetCard.js` possuímos um array contendo objetos que representam os pets, com as seguintes propriedades.

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="antialiased">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop X - Aqui você encontra tudo para seu pet</title>
+  <!-- Script para adicionar tailwindcss ao projeto -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Toast Notification Lib - toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!-- script para extender algumas estilizações default do tailwindCSS -->
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      #check-box-1:checked ~ .check-1 {
+        @apply opacity-100 text-violet-400;
+        animation: check-animation 0.7s 1;
+      }
+
+      #check-box-2:checked ~ .check-1 {
+        @apply opacity-100 text-violet-400;
+        animation: check-animation 0.7s 1;
+      }
+
+      @keyframes check-animation {
+        0%, 100%{
+          @apply transform scale-100
+        }
+        50% {
+          @apply transform scale-150 opacity-0
+        }
+      }
+    }
+    
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        },
+        extend: {}
+      }
+    }
+  </script>
+
+  <!-- Link para o cdn do google para buscar fontes externas -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Toast Notification Lib - toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!-- BOX ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+  <div class="min-h-screen max-w-[100vw] bg-zinc-100">
+    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-evenly shadow-md">
+      <!-- Logo -->
+      <a href="/index.html"
+        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_27_868)">
+            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+              fill="#9F75FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_27_868">
+              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
+      <div
+        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+        <i class='bx bx-search px-2'></i>
+
+        <!-- sr-only para deixar apenas visível para leitores de tela -->
+        <label for="search" class="sr-only">Busque por seus produtos</label>
+        <input id="search" type="text" placeholder="Busque por seus produtos..."
+          class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
+      </div>
+
+      <a href="./myFavorites.html"
+        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
+        favoritos
+      </a>
+
+      <!-- Fazendo este botão direcionar randomicamente para o carrinho com produto ou para um carrinho vazio -->
+      <button
+        class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
+        id="cartButton" onclick="redirectToRandomPage()" type="button">
+        <i class='bx bx-sm bx-cart'></i>
+        Meus pedidos (0)
+      </button>
+
+      <a href="./register.html"
+        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Criar
+        conta
+      </a>
+
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2">
+        <i class='bx bx-log-out bx-sm text-zinc-300 hover:text-zinc-500 cursor-pointer'></i>
+      </a>
+    </header>
+
+
+    <main class="max-w-6xl mx-auto flex flex-col gap-10">
+      <!-- Produtos em destaque -->
+      <section class="flex flex-col space-y-5 mb-10">
+        <form class="px-7 py-4 bg-slate-200/20 shadow-md gap-20 my-10 w-2/3 mx-auto" onsubmit="submitRegisterForm(event)">
+          <div class="flex items-center justify-center gap-4">
+            <i class='bx bx-plus bx-sm text-violet-600'></i>
+            <h2 class="text-2xl font-bold uppercase">Criar conta</h2>
+          </div>
+
+          <div class="w-full bg-zinc-300/20 shadow-md px-6 py-20 flex flex-col gap-7 max-h-[800px] mt-10">
+            <!-- Nome completo e cpf -->
+            <div class="grid grid-cols-2 items-center gap-10">
+              <!-- Input - Nome -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="username" class="text-violet-400 sr-only">Nome completo: </label>
+                <input id="username" type="text" required placeholder="Nome completo*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+
+              <!-- Input - CPF -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="cpf" class="text-violet-400 sr-only">CPF: </label>
+                <input id="cpf" type="text" required placeholder="CPF*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+            </div>
+
+
+            <!-- Input - E-mail -->
+            <div class="flex flex-col items-start gap-2 group">
+              <label for="email" class="text-violet-400 sr-only">E-mail: </label>
+              <input id="email" type="email" required placeholder="E-mail*"
+                class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+            </div>
+
+
+            <!-- Data de nascimento e número de contato -->
+            <div class="grid grid-cols-2 items-center gap-10">
+              <!-- Input - Nome -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="birthday" class="text-violet-400 sr-only">Data de nascimento: </label>
+                <input id="birthday" type="date" required placeholder="Data de nascimento*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+
+              <!-- Input - Número de contato -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="phone" class="text-violet-400 sr-only">Telefone celular </label>
+                <input id="phone" type="text" placeholder="Telefone celular*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+            </div>
+
+            <!-- Senha -->
+            <div class="grid grid-cols-2 items-center gap-10">
+              <!-- Input - Senha -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="password" class="text-violet-400 sr-only">Senha: </label>
+                <input id="password" type="password" minlength="8" required placeholder="Crie sua senha*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+
+              <!-- Input - Confirmar senha -->
+              <div class="flex flex-col items-start gap-2 group">
+                <label for="confirmPassword" class="text-violet-400 sr-only">Confirmar senha: </label>
+                <input id="confirmPassword" type="password" required minlength="8" placeholder="Confirme sua senha*"
+                  class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
+              </div>
+            </div>
+
+            <p class="text-xs text-zinc-400">(*) Campos obrigatórios</p>
+
+            <div class="flex items-center gap-2">
+              <label for="check-box-1" class="cursor-pointer relative">
+                <input id="check-box-1" type="checkbox"
+                  class="appearance-none h-6 w-6 border-2 border-violet-400 rounded-md">
+                <i class='bx bx-sm bx-check absolute left-0 top-0 opacity-0 check-1 transition'></i>
+              </label>
+
+              <span class="text-zinc-400 text-sm">Quero receber ofertas e novidades por e-mail</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <label for="check-box-2" class="cursor-pointer relative">
+                <input id="check-box-2" type="checkbox"
+                  class="appearance-none h-6 w-6 border-2 border-violet-400 rounded-md">
+                <i class='bx bx-sm bx-check absolute left-0 top-0 opacity-0 check-1 transition'></i>
+              </label>
+
+              <span class="text-zinc-400 text-sm">Li e estou de acordo com as regras do site</span>
+            </div>
+
+            <button
+              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase disabled:bg-zinc-400 disabled:cursor-not-allowed font-bold"
+              type="submit">
+              <i class='bx bx-edit-alt bx-sm '></i>
+              CONTINUAR
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="max-w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+      <!-- Logo -->
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_27_868)">
+            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+              fill="#9F75FF" />
+          </g>
+          <defs>
+            <clipPath id="clip0_27_868">
+              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <div class="flex flex-col items-end">
+        <p class="text-zinc-400 text-sm">Contato: (51) 9 9999-9999</p>
+        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
+        <p class="text-zinc-400 text-sm">Elaborado por: Renan Fachin</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/registerForm.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
