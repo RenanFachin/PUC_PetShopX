@@ -42,6 +42,7 @@ Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validaç
 
 2. **./pages**: Aqui estão as páginas HTML.
 
+   - **pages/loginForm.html**: Página destinada para realizar o login na aplicação.
    - **./pages/register.html**: Página destinada ao registro de um usuário no sistema.
    - **./pages/cart.html**: Página do carrinho de compras, onde os produtos selecionados pelos usuários podem ser exibidos.
    - **./pages/emptyCart.html**: Página do carrinho de compras, porém quando não tiver nenhum item adicionado.
@@ -57,6 +58,7 @@ Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validaç
 
 ## To-do
 - [x] Página Home
+- [x] Página de login
 - [x] Página de registro
 - [x] Página de Produtos
 - [x] Página de Carrinho
@@ -84,6 +86,18 @@ git clone https://github.com/RenanFachin/PUC_PetShopX.git
 ```
 
 2. Acesse a aplicação em seu navegador a partir do arquivo index.html
+
+## Simulando login na aplicação
+Para criar uma simulação de um case real, foi criado um array contendo alguns usuários previamente cadastrados:
+
+```js
+  const users = [
+    {username: "user1", password: 'password'},
+    {username: "user2", password: 'password'},
+  ]
+```
+
+Caso sejam informados username e passwords contidos em users, o sistema retornara uma mensagem de login efetuado com sucesso, caso contrário, será um alerta de erro.
 
 ## Criando usuário
 Na página /pages/register.html, será possível verificar como seria a criação de usuário, o form consta com campos de tipo text, date, email, checkbox.
