@@ -97,11 +97,11 @@
     </header>
 
     <main class="max-w-6xl mx-auto flex flex-col">
-      <div class="flex flex-col gap-5 mt-20">
+      <div class="flex flex-col gap-12 mt-20">
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-user bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus dados</h3>
+            <h3 class="text-2xl uppercase font-bold">Meus dados</h3>
           </div>
 
 
@@ -110,39 +110,39 @@
             <img src="http://github.com/RenanFachin.png" alt="Imagem de perfil do usuário"
               class="w-32 h-32 rounded-full object-cover" id="profile-image">
 
-            <div class="flex flex-col flex-1 gap-6">
-              <h3 class="text-sm">Bem vindo, <strong class="text-2xl ml-2">Renan Tavares Fachin</strong></h3>
+            <div class="flex flex-col flex-1 gap-6 items-center md:items-start">
+              <h3 class="text-sm">Bem vindo, <strong class="text-xl md:text-2xl ml-2">Renan Tavares Fachin</strong></h3>
 
 
               <!-- Flex-wrap para ele fazer a quebra automática da linha para quando não tiver mais espaçamento -->
-              <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col gap-3 md:flex-row md:flex-wrap md:gap-4">
                 <label
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2 cursor-pointer">
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2 cursor-pointer">
                   <span>ALTERAR IMAGEM DE PERFIL</span>
                   <!-- Adicionado o sr only, para que desaparece o componente de input da tela porém, ele está incorporado ao label -->
                   <input type="file" class="cursor-pointer sr-only" id="profile-image-input">
                 </label>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Alterar e-mail
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Alterar senha
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Adicionar pet
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Ver meus pets
                 </button>
@@ -155,7 +155,7 @@
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bxs-cat bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus PETS</h3>
+            <h3 class="text-xl uppercase font-bold">Meus PETS</h3>
           </div>
 
           <div id="petContainer" class="flex flex-col items-start gap-5 w-full">
@@ -166,7 +166,7 @@
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bxs-cat bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Adicionar PET</h3>
+            <h3 class="text-xl uppercase font-bold">Adicionar PET</h3>
           </div>
 
           <!-- Card de novo pet (Simulando um espaço vazio) -->

@@ -82,12 +82,12 @@
     </header>
 
     <main class="max-w-6xl mx-auto flex flex-col">
-      <div class="flex flex-col gap-5 mt-20">
+      <div class="flex flex-col gap-12 mt-20">
         <!-- Meus dados -->
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-user bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus dados</h3>
+            <h3 class="text-2xl font-bold">Meus dados</h3>
           </div>
 
 
@@ -126,111 +126,160 @@
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-cart bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus pedidos</h3>
+            <h3 class="text-xl uppercase font-bold">Meus pedidos</h3>
           </div>
 
-          <!-- Pedido 1 (Em andamento) -->
-          <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
+          <div class="hidden md:block w-full">
+            <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Número do pedido</p>
-              <span class="text-sm text-center text-zinc-400">#9999999999</span>
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Número do pedido</p>
+                <span class="text-sm text-center text-zinc-400">#9999999999</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Status do pedido</p>
+
+                <span
+                  class="p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 text-center">Em
+                  andamento</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Data do pedido</p>
+                <span class="text-sm text-center text-zinc-400">22/08/2023</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Forma do pagamento</p>
+                <span class="text-sm text-center text-zinc-400">PIX</span>
+              </div>
+
+
+              <button class="flex flex-col gap-3">
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
+                  do pedido</span>
+              </button>
             </div>
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Status do pedido</p>
+            <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
 
-              <div class="flex items-center gap-1 justify-center">
-                <div class="w-1 h-1 rounded-full bg-yellow-600"></div>
-                <span class="text-sm text-center text-yellow-600 font-bold">Em andamento</span>
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Número do pedido</p>
+                <span class="text-sm text-center text-zinc-400">#9999999999</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Status do pedido</p>
+
+                <span
+                  class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-50 text-center">Concluído</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Data do pedido</p>
+                <span class="text-sm text-center text-zinc-400">22/08/2023</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Forma do pagamento</p>
+                <span class="text-sm text-center text-zinc-400">PIX</span>
+              </div>
+
+
+              <button class="flex flex-col gap-3">
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
+                  do pedido</span>
+              </button>
+            </div>
+
+            <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Número do pedido</p>
+                <span class="text-sm text-center text-zinc-400">#9999999999</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Status do pedido</p>
+
+                <span
+                  class="p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-50 text-center">Cancelado</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Data do pedido</p>
+                <span class="text-sm text-center text-zinc-400">22/08/2023</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <p class="font-bold">Forma do pagamento</p>
+                <span class="text-sm text-center text-zinc-400">PIX</span>
+              </div>
+
+
+              <button class="flex flex-col gap-3">
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
+                  do pedido</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:hidden w-full">
+            <div class="bg-slate-200/20 p-4 rounded-lg shadow space-y-4">
+              <div class="flex items-center space-x-2 text-sm">
+                <div class="text-sm text-zinc-400 font-bold">#9999999</div>
+                <div class="text-sm text-zinc-400">22/08/2023</div>
+                <div>
+                  <span
+                    class="p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50">Em
+                    andamento</span>
+                </div>
+              </div>
+
+              <div>
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline  hover:underline-offset-4 cursor-pointer">Detalhes
+                  do pedido</span>
               </div>
             </div>
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Data do pedido</p>
-              <span class="text-sm text-center text-zinc-400">22/08/2023</span>
-            </div>
+            <div class="bg-slate-200/20 p-4 rounded-lg shadow space-y-4">
+              <div class="flex items-center space-x-2 text-sm">
+                <div class="text-sm text-zinc-400 font-bold">#9999999 </div>
+                <div class="text-sm text-zinc-400">22/08/2023</div>
+                <div>
+                  <span
+                    class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-50">Concluído</span>
+                </div>
+              </div>
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Forma do pagamento</p>
-              <span class="text-sm text-center text-zinc-400">PIX</span>
-            </div>
-
-
-            <button class="flex flex-col gap-3">
-              <span
-                class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
-                do pedido</span>
-            </button>
-          </div>
-
-          <!-- Pedido 2 (Concluído)-->
-          <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Número do pedido</p>
-              <span class="text-sm text-center text-zinc-400">#9999999999</span>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Status do pedido</p>
-              
-              <div class="flex items-center gap-1 justify-center">
-                <div class="w-1 h-1 rounded-full bg-green-600"></div>
-                <span class="text-sm text-center text-green-600 font-bold">Concluído</span>
+              <div>
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline  hover:underline-offset-4 cursor-pointer">Detalhes
+                  do pedido</span>
               </div>
             </div>
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Data do pedido</p>
-              <span class="text-sm text-center text-zinc-400">22/08/2023</span>
-            </div>
+            <div class="bg-slate-200/20 p-4 rounded-lg shadow space-y-4">
+              <div class="flex items-center space-x-2 text-sm">
+                <div class="text-sm text-zinc-400 font-bold">#9999999 </div>
+                <div class="text-sm text-zinc-400">22/08/2023</div>
+                <div>
+                  <span
+                    class="p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-50">Cancelado</span>
+                </div>
+              </div>
 
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Forma do pagamento</p>
-              <span class="text-sm text-center text-zinc-400">PIX</span>
-            </div>
-
-            <button class="flex flex-col gap-3">
-              <span
-                class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
-                do pedido</span>
-            </button>
-          </div>
-
-          <!-- Pedido 3 (Cancelado)-->
-          <div class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 justify-between">
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Número do pedido</p>
-              <span class="text-sm text-center text-zinc-400">#9999999999</span>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Status do pedido</p>
-
-              <div class="flex items-center gap-1 justify-center">
-                <div class="w-1 h-1 rounded-full bg-red-600"></div>
-              <span class="text-sm text-center text-red-600 font-bold">Cancelado</span>
+              <div>
+                <span
+                  class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline  hover:underline-offset-4 cursor-pointer">Detalhes
+                  do pedido</span>
               </div>
             </div>
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Data do pedido</p>
-              <span class="text-sm text-center text-zinc-400">22/08/2023</span>
-            </div>
-
-            <div class="flex flex-col gap-3">
-              <p class="font-bold">Forma do pagamento</p>
-              <span class="text-sm text-center text-zinc-400">PIX</span>
-            </div>
-
-
-            <button class="flex flex-col gap-3">
-              <span
-                class="text-sm text-center text-zinc-400 hover:text-violet-400 hover:underline hover:underline-offset-4">Detalhes
-                do pedido</span>
-            </button>
           </div>
         </section>
 
@@ -238,7 +287,7 @@
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-star bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus pedidos</h3>
+            <h3 class="text-xl uppercase font-bold">Meus favoritos</h3>
           </div>
 
           <section class="flex gap-6 justify-center">
