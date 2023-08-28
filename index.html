@@ -36,7 +36,8 @@
 
 <body>
   <div class="min-h-screen max-w-[100vw] bg-zinc-100">
-    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-evenly shadow-md">
+    <header
+      class="max-w-full px-10 py-2 lg:px-40 lg:py-6 bg-zinc-200/20 flex items-center justify-between md:justify-evenly shadow-md gap-3 md:gap-0">
       <!-- Logo -->
       <a href="/index.html"
         class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
@@ -61,24 +62,26 @@
         <!-- sr-only para deixar apenas visível para leitores de tela -->
         <label for="search" class="sr-only">Busque por seus produtos</label>
         <input id="search" type="text" placeholder="Busque por seus produtos..."
-          class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
+          class="bg-zinc-200 outline-none text-sm py-2 text-zinc-700 shadow-sm">
       </div>
 
       <a href="./pages/myFavorites.html"
-        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
+        class="hidden xl:block text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos
       </a>
 
-      <!-- Fazendo este botão direcionar randomicamente para o carrinho com produto ou para um carrinho vazio -->
-      <button
-        class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-        id="cartButton" onclick="redirectToRandomPage()" type="button">
-        <i class='bx bx-sm bx-cart'></i>
-        Meus pedidos (0)
+      <button class="hidden md:block" id="cartButton" onclick="redirectToRandomPage()" type="button">
+        <div
+          class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+          <i class='bx bx-sm bx-cart'></i>
+          <span>
+            Meus pedidos (0)
+          </span>
+        </div>
       </button>
 
       <a href="./pages/user/profile.html"
-        class="cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
+        class="hidden lg:block cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
         <img src="http://github.com/RenanFachin.png" alt="Foto de perfil do usuário" class="w-12 h-12 rounded-full">
       </a>
 
@@ -91,20 +94,20 @@
     <div class="bg-zinc-200/30 w-full shadow-sm">
       <div class="bg-zinc-200/30 max-w-6xl mx-auto flex items-center gap-2">
         <nav class="w-full">
-          <ul class="grid grid-cols-4 py-1 px-9">
-            <li class="border-r-2 border-white px-5 hover:bg-zinc-200/80 text-center text-zinc-500">
+          <ul class="grid grid-cols-4 py-1 lg:px-9">
+            <li class="border-r-2 border-white lg:px-5 hover:bg-zinc-200/80 text-center text-zinc-500 text-xs lg:text-base">
               <a href="#" class="uppercase font-bold">Produtos</a>
             </li>
 
-            <li class="border-r-2 border-white px-5 hover:bg-zinc-200/80 text-center text-zinc-500">
+            <li class="border-r-2 border-white lg:px-5 hover:bg-zinc-200/80 text-center text-zinc-500 text-xs lg:text-base">
               <a href="#" class="uppercase font-bold">Oferta do dia</a>
             </li>
 
-            <li class="border-r-2 border-white px-5 hover:bg-zinc-200/80 text-center text-zinc-500">
+            <li class="border-r-2 border-white lg:px-5 hover:bg-zinc-200/80 text-center text-zinc-500 text-xs lg:text-base">
               <a href="#" class="uppercase font-bold">Lançamentos</a>
             </li>
 
-            <li class="px-5 hover:bg-zinc-200/80 text-center text-zinc-500">
+            <li class="lg:px-5 hover:bg-zinc-200/80 text-center text-zinc-500 text-xs lg:text-base">
               <a href="#" class="uppercase font-bold">Serviços</a>
             </li>
           </ul>
@@ -112,19 +115,19 @@
       </div>
     </div>
 
-    <main class="max-w-6xl mx-auto flex flex-col gap-10">
+    <main class="max-w-6xl mx-auto flex flex-col gap-10 p-3">
       <!-- Banner -->
-      <section class="min-h-[260px] w-full bg-white mt-20 rounded-lg shadow-sm flex items-center justify-center gap-32">
+      <section class="min-h-[260px] w-full bg-white mt-10 lg:mt-20 rounded-lg shadow-sm flex items-center justify-center gap-10 lg:gap-32">
         <a href="#" class="">
-          <img src="./assets/images/bannerIMG.png" alt="Rações de gato" class="">
+          <img src="./assets/images/bannerIMG.png" alt="Rações de gato" class="ml-4 lg:ml-0">
         </a>
 
         <div class="flex flex-col items-start">
-          <strong class="uppercase text-2xl">COMPRE</strong>
-          <span>Ração para gatos GranPlus 3kg</span>
+          <strong class="uppercase text-xl lg:text-2xl">COMPRE</strong>
+          <span class="text-xs lg:text-base">Ração para gatos GranPlus 3kg</span>
 
-          <strong class="uppercase text-4xl mt-2">GANHE</strong>
-          <span class="">3 Sachês</span>
+          <strong class="uppercase text-2xl lg:text-4xl mt-2">GANHE</strong>
+          <span class="text-xs lg:text-base">3 Sachês</span>
 
           <button
             class="bg-violet-500 text-white py-1 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase font-bold mt-3">
@@ -135,10 +138,10 @@
 
       <!-- Produtos em destaque -->
       <section class="flex flex-col space-y-5 mb-10">
-        <h2 class="text-2xl font-bold">Produtos disponíveis</h2>
+        <h2 class="text-2xl font-bold uppercase">Produtos disponíveis</h2>
 
         <!-- Primeira sessão produtos -->
-        <section class="flex gap-6 justify-center">
+        <section class="flex flex-col md:flex-row gap-6 justify-center">
           <!-- card -->
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
@@ -238,7 +241,7 @@
         </section>
 
         <!-- Segunda sessão produtos -->
-        <section class="flex gap-6 justify-center">
+        <section class="flex flex-col md:flex-row gap-6 justify-center">
           <!-- card -->
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
@@ -340,7 +343,8 @@
       </section>
     </main>
 
-    <footer class="max-w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+    <footer
+      class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -357,10 +361,10 @@
       </a>
 
       <div class="flex flex-col items-end">
-        <p class="text-zinc-400 text-sm">Contato: (51) 9 9999-9999</p>
-        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
-        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
-        <p class="text-zinc-400 text-sm">Elaborado por: Renan Fachin</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Contato: (51) 9 9999-9999</p>
+        <p class="text-zinc-400 text-xs md:text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Projeto criado com fins acadêmicos</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Elaborado por: Renan Fachin</p>
       </div>
     </footer>
   </div>
