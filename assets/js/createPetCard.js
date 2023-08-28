@@ -45,9 +45,10 @@ function renderizarPetCard() {
                     class="w-32 h-32 rounded-full object-cover">
 
                   <strong
-                    class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm">${pet.nome}</strong>
+                    class="bg-violet-600 max-w-[200px] text-center text-white px-12 py-2 rounded-lg text-sm uppercase">${pet.nome}</strong>
                 </div>
 
+                <div class="hidden lg:block">
                 <div class="flex flex-col items-start gap-2">
                   <p class="text-zinc-400">Raça: <span class="text-zinc-500/70 font-bold">${pet.raça}</span></p>
                   <p class="text-zinc-400">Data de nascimento: <span
@@ -57,6 +58,7 @@ function renderizarPetCard() {
                   <p class="text-zinc-400">Porte: <span class="text-zinc-500/70 font-bold">${pet.porte}</span></p>
                   <p class="text-zinc-400">Última consulta: <span class="text-zinc-500/70 font-bold">${pet.ultimaConsulta}</span>
                   </p>
+                </div>
                 </div>
               </div>
 
