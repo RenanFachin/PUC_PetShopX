@@ -38,7 +38,7 @@ function renderizarPetCard() {
   pets.map((pet) => {
     content += `
   <div
-              class="group bg-[#9F75FF]/10 py-8 px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
+              class="group bg-[#9F75FF]/10 py-2 px-4 lg:py-8 lg:px-16 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full animal-card cursor-pointer transition-colors duration-500 ease-out">
               <div class="flex items-center gap-10">
                 <div class="flex flex-col items-center gap-6 text-zinc-500">
                   <img src="${pet.petImage}" alt="Imagem do pet"
