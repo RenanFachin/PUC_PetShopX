@@ -66,10 +66,11 @@
 
 <body>
   <div class="min-h-screen max-w-[100vw] bg-zinc-100">
-    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-evenly shadow-md">
+    <header
+      class="max-w-full px-10 py-2 lg:px-40 lg:py-6 bg-zinc-200/20 flex items-center justify-between md:justify-evenly shadow-md gap-3 md:gap-0">
       <!-- Logo -->
       <a href="/index.html"
-        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md hidden lg:block">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_27_868)">
             <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
@@ -85,42 +86,45 @@
 
       <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
       <div
-        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 ">
         <i class='bx bx-search px-2'></i>
 
         <!-- sr-only para deixar apenas visível para leitores de tela -->
         <label for="search" class="sr-only">Busque por seus produtos</label>
         <input id="search" type="text" placeholder="Busque por seus produtos..."
-          class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
+          class="bg-zinc-200 outline-none text-sm py-2 text-zinc-700 shadow-sm">
       </div>
 
       <a href="./myFavorites.html"
-        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
+        class="hidden xl:block text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos
       </a>
 
       <!-- Fazendo este botão direcionar randomicamente para o carrinho com produto ou para um carrinho vazio -->
-      <button
-        class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-        id="cartButton" onclick="redirectToRandomPage()" type="button">
-        <i class='bx bx-sm bx-cart'></i>
-        Meus pedidos (0)
+      <button class="hidden md:block" id="cartButton" onclick="redirectToRandomPage()" type="button">
+        <div
+          class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+          <i class='bx bx-sm bx-cart'></i>
+          <span>
+            Meus pedidos (0)
+          </span>
+        </div>
       </button>
 
-      <div class="flex items-center flex-col text-zinc-300 text-xs">
-        <p>Faça <a href="./loginForm.html"
-            class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">login</a>
+      <div class="flex flex-col">
+        <p class="text-zinc-300 text-xs">Faça <a href="./loginForm.html"
+            class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">login</a> ou
         </p>
-        <p>ou
-          <a href="./register.html"
-            class="text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">crie
-            sua
-            conta
-          </a>
-        </p>
+      
+
+        <p class="text-zinc-300 text-xs">Faça <a href="./register.html"
+          class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">sua
+          conta</a>
+      </p>
+
       </div>
 
-      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2">
+      <a href="#" class="hidden lg:block outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2">
         <i class='bx bx-log-out bx-sm text-zinc-300 hover:text-zinc-500 cursor-pointer'></i>
       </a>
     </header>
@@ -129,7 +133,8 @@
     <main class="max-w-2xl mx-auto flex flex-col gap-10">
       <!-- Produtos em destaque -->
       <section>
-        <form class="flex flex-col gap-5 px-7 py-4 bg-slate-200/20 shadow-md my-10 w-2/3 mx-auto" id="login-form" onsubmit="login(event)">
+        <form class="flex flex-col gap-5 px-7 py-4 bg-slate-200/20 shadow-md my-10 w-2/3 mx-auto" id="login-form"
+          onsubmit="login(event)">
           <div class="flex flex-col items-center justify-center gap-4">
             <svg width="78" height="80" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -149,8 +154,8 @@
             <!-- Input - Email ou CPF -->
             <div class="flex flex-col items-start gap-2 group relative" data-te-input-wrapper-init>
               <input type="text"
-                class="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 bg-zinc-300/40 text-zinc-500" required
-                id="username" placeholder="E-mail ou CPF" />
+                class="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 bg-zinc-300/40 text-zinc-500"
+                required id="username" placeholder="E-mail ou CPF" />
               <label for="username"
                 class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none text-zinc-500 ">E-mail
                 ou CPF
@@ -160,8 +165,8 @@
             <!-- Input - senha -->
             <div class="flex flex-col items-start gap-2 group relative" data-te-input-wrapper-init>
               <input type="password"
-                class="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 bg-zinc-300/40 text-zinc-500" required
-                id="password" placeholder="Senha" />
+                class="peer block min-h-[auto] w-full rounded border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 bg-zinc-300/40 text-zinc-500"
+                required id="password" placeholder="Senha" />
               <label for="password"
                 class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none text-zinc-500 ">Senha
               </label>
@@ -197,22 +202,22 @@
           <hr class="">
 
 
-         <div class="flex items-center flex-wrap justify-center gap-5">
-          <button class="bg-[#DC453A] rounded-lg hover:bg-[#AC2218]">
-            <i class='bx bxl-google border-r border-r-white p-3 text-white' ></i>
-            <span class="text-white px-5 py-3">Google</span>
-          </button>
+          <div class="flex items-center flex-wrap justify-center gap-5">
+            <button class="bg-[#DC453A] rounded-lg hover:bg-[#AC2218]">
+              <i class='bx bxl-google border-r border-r-white p-3 text-white'></i>
+              <span class="text-white px-5 py-3 hidden lg:block">Google</span>
+            </button>
 
-          <button class="bg-[#416BB7] rounded-lg hover:bg-[#0B3A8F]">
-            <i class='bx bxl-facebook border-r border-r-white p-3 text-white' ></i>
-            <span class="text-white px-5 py-3">Facebook</span>
-          </button>
+            <button class="bg-[#416BB7] rounded-lg hover:bg-[#0B3A8F]">
+              <i class='bx bxl-facebook border-r border-r-white p-3 text-white'></i>
+              <span class="text-white px-5 py-3 hidden lg:block">Facebook</span>
+            </button>
 
-          <button class="bg-[#7289DA] rounded-lg hover:bg-[#4459A5]">
-            <i class='bx bxl-discord-alt border-r border-r-white p-3 text-white' ></i>
-            <span class="text-white px-5 py-3">Discord</span>
-          </button>
-         </div>
+            <button class="bg-[#7289DA] rounded-lg hover:bg-[#4459A5]">
+              <i class='bx bxl-discord-alt border-r border-r-white p-3 text-white'></i>
+              <span class="text-white px-5 py-3 hidden lg:block">Discord</span>
+            </button>
+          </div>
         </form>
 
 
@@ -221,7 +226,7 @@
     </main>
 
     <footer
-      class="max-w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10 fixed bottom-0 left-0 right-0">
+      class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10 fixed bottom-0 left-0 right-0">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,10 +243,10 @@
       </a>
 
       <div class="flex flex-col items-end">
-        <p class="text-zinc-400 text-sm">Contato: (51) 9 9999-9999</p>
-        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
-        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
-        <p class="text-zinc-400 text-sm">Elaborado por: Renan Fachin</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Contato: (51) 9 9999-9999</p>
+        <p class="text-zinc-400 text-xs md:text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Projeto criado com fins acadêmicos</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Elaborado por: Renan Fachin</p>
       </div>
     </footer>
   </div>
