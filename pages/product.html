@@ -54,13 +54,53 @@
 
       <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
       <div
-        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+        class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 relative">
         <i class='bx bx-search px-2'></i>
 
         <!-- sr-only para deixar apenas visível para leitores de tela -->
         <label for="search" class="sr-only">Busque por seus produtos</label>
         <input id="search" type="text" placeholder="Busque por seus produtos..."
           class="bg-zinc-200 outline-none text-sm py-2 text-zinc-700 shadow-sm">
+
+
+        <ul class="product-list absolute top-14 left-0 space-y-2 w-full">
+          <li class="product-item hidden" data-product-name="Ração GranPlus Choice Gatos">
+            <a href="../pages/product.html?id=product1"
+              class="flex gap-4 items-center justify-between bg-white rounded-md max-h-[470px]  p-2">
+
+              <img src="../assets/images/racao1.png" alt="Imagem produto" class="max-w-[40px] max-h-[70px]">
+
+              <h3 class="font-bold text-center text-xs">Ração GranPlus Choice Gatos</h3>
+            </a>
+          </li>
+          <li class="product-item hidden" data-product-name="Ração Golden Gatos Castrados">
+            <a href="../pages/product.html?id=product2"
+              class="flex gap-4 items-center justify-between bg-white rounded-md max-h-[470px] p-2">
+
+              <img src="../assets/images/ração-seca-2.png" alt="Imagem produto" class="max-w-[70px] max-h-[70px]">
+
+              <h3 class="font-bold text-center text-xs">Ração Golden Gatos Castrados</h3>
+            </a>
+          </li>
+          <li class="product-item hidden" data-product-name="Ração úmida Whikas Sachê">
+            <a href="../pages/product.html?id=product3"
+              class="flex gap-4 items-center justify-between bg-white rounded-md max-h-[470px] p-2">
+
+              <img src="../assets/images/racao-umida-1.png" alt="Imagem produto" class="max-w-[70px] max-h-[70px]">
+
+              <h3 class="font-bold text-center text-xs">Ração úmida Whikas Sachê</h3>
+            </a>
+          </li>
+          <li class="product-item hidden" data-product-name="Ração úmida GranPlus">
+            <a href="../pages/product.html?id=product4"
+              class="flex gap-4 items-center justify-between bg-white rounded-md max-h-[470px] p-2">
+
+              <img src="../assets/images/racao-umida-2.png" alt="Imagem produto" class="max-w-[70px] max-h-[70px]">
+
+              <h3 class="font-bold text-center text-xs">Ração úmida GranPlus</h3>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <a href="./myFavorites.html"
@@ -148,7 +188,7 @@
   <script src="../assets/js/cart.js"></script>
   <script src="../assets/js/randomCartRedirect.js"></script>
   <script src="../assets/js/productGeneratePage.js"></script>
-
+  <script src="../assets/js/searchProducts.js"></script>
 
 </body>
 
