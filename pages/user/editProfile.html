@@ -38,10 +38,11 @@
 
 <body>
   <div class="min-h-screen max-w-[100vw] bg-zinc-100">
-    <header class="max-w-full px-40 py-6 bg-zinc-200/20 flex items-center justify-evenly shadow-md">
+    <header
+      class="max-w-full px-10 py-2 lg:px-40 lg:py-6 bg-zinc-200/20 flex items-center justify-between md:justify-evenly shadow-md gap-3 md:gap-0">
       <!-- Logo -->
       <a href="/index.html"
-        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md hidden lg:block">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_27_868)">
             <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
@@ -59,24 +60,30 @@
       <div
         class="group bg-zinc-200 flex items-center focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
         <i class='bx bx-search px-2'></i>
-        <input type="text" placeholder="Busque por seus produtos..."
-          class="bg-zinc-200 outline-none text-sm py-2 min-w-[500px] text-zinc-700 shadow-sm">
+
+        <!-- sr-only para deixar apenas visível para leitores de tela -->
+        <label for="search" class="sr-only">Busque por seus produtos</label>
+        <input id="search" type="text" placeholder="Busque por seus produtos..."
+          class="bg-zinc-200 outline-none text-sm py-2 text-zinc-700 shadow-sm">
       </div>
 
       <a href="../myFavorites.html"
-        class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
+        class="hidden xl:block text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos
       </a>
 
-      <button
-        class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2"
-        onclick="window.location.href =  '../cart.html'" type="button">
-        <i class='bx bx-sm bx-cart'></i>
-        Meus pedidos (0)
+      <button class="hidden md:block" id="cartButton" onclick="window.location.href =  '../cart.html'" type="button">
+        <div
+          class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
+          <i class='bx bx-sm bx-cart'></i>
+          <span>
+            Meus pedidos (0)
+          </span>
+        </div>
       </button>
 
       <a href="./profile.html"
-        class="cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
+        class="hidden lg:block cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
         <img src="http://github.com/RenanFachin.png" alt="Foto de perfil do usuário" class="w-12 h-12 rounded-full">
       </a>
 
@@ -85,55 +92,55 @@
       </a>
     </header>
 
-    <main class="max-w-6xl mx-auto flex flex-col">
-      <div class="flex flex-col gap-5 mt-20">
+    <main class="max-w-6xl mx-auto flex flex-col p-5">
+      <div class="flex flex-col gap-5 mt-10 lg:mt-20">
         <!-- Meus dados -->
         <section class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-user bx-md text-violet-500'></i>
-            <h3 class="text-2xl">Meus dados</h3>
+            <h3 class="text-2xl uppercase font-bold">Meus dados</h3>
           </div>
+
 
           <div
             class="w-full bg-slate-200/20 py-7 pl-16 pr-20 shadow-md flex items-center gap-10 profile-image-container">
             <img src="http://github.com/RenanFachin.png" alt="Imagem de perfil do usuário"
               class="w-32 h-32 rounded-full object-cover" id="profile-image">
 
-            <div class="flex flex-col flex-1 gap-6">
-              <h3 class="text-sm">Bem vindo, <strong class="text-2xl ml-2 text-zinc-800">Renan Tavares Fachin</strong>
-              </h3>
+            <div class="flex flex-col flex-1 gap-6 items-center md:items-start">
+              <h3 class="text-sm">Bem vindo, <strong class="text-lg md:text-2xl ml-2">Renan Tavares Fachin</strong></h3>
 
 
               <!-- Flex-wrap para ele fazer a quebra automática da linha para quando não tiver mais espaçamento -->
-              <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col gap-3 md:flex-row md:flex-wrap md:gap-4">
                 <label
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2 cursor-pointer">
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2 cursor-pointer">
                   <span>ALTERAR IMAGEM DE PERFIL</span>
                   <!-- Adicionado o sr only, para que desaparece o componente de input da tela porém, ele está incorporado ao label -->
                   <input type="file" class="cursor-pointer sr-only" id="profile-image-input">
                 </label>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Alterar e-mail
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                   type="button">
                   Alterar senha
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
-                  type="button" onclick="window.location.href =  './myPets.html'">
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
+                  type="button">
                   Adicionar pet
                 </button>
 
                 <button
-                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
-                  type="button" onclick="window.location.href =  './myPets.html'">
+                  class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
+                  type="button">
                   Ver meus pets
                 </button>
               </div>
@@ -143,7 +150,7 @@
         </section>
 
         <!-- Local onde estão os dados do usuário -> Todos os inputs estão com value adicionado pois é para simular como se todos os dados estivessem sendo consumidos de um banco de dados próprio -->
-        <section class="grid grid-cols-2 gap-10">
+        <section class="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <div class="w-full bg-zinc-300/20 shadow-md px-6 py-10 flex flex-col gap-7 max-h-[570px]">
             <!-- Input - Nome -->
             <div class="flex flex-col items-start gap-2 group">
@@ -291,7 +298,7 @@
           <h3 class="text-2xl">Solicitar atendimento</h3>
         </div>
 
-        <section class="grid grid-cols-2 px-7 py-4 bg-slate-200/20 shadow-md gap-20 mb-10">
+        <section class="grid grid-cols-1 lg:grid-cols-2 px-3 py-2 lg:px-7 lg:py-4 bg-slate-200/20 shadow-md gap-8 lg:gap-20 mb-5 lg:mb-10">
           <div class="bg-slate-200/20">
 
             <!-- Card 1 -->
@@ -356,7 +363,8 @@
       </div>
     </main>
 
-    <footer class="w-full px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+    <footer
+      class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,10 +381,10 @@
       </a>
 
       <div class="flex flex-col items-end">
-        <p class="text-zinc-400 text-sm">Contato: (51) 9 9999-9999</p>
-        <p class="text-zinc-400 text-sm">© 2023 - Todos os direitos reservados.</p>
-        <p class="text-zinc-400 text-sm">Projeto criado com fins acadêmicos</p>
-        <p class="text-zinc-400 text-sm">Elaborado por: Renan Fachin</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Contato: (51) 9 9999-9999</p>
+        <p class="text-zinc-400 text-xs md:text-sm">© 2023 - Todos os direitos reservados.</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Projeto criado com fins acadêmicos</p>
+        <p class="text-zinc-400 text-xs md:text-sm">Elaborado por: Renan Fachin</p>
       </div>
     </footer>
   </div>
