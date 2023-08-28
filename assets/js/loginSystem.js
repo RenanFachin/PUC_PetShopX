@@ -1,14 +1,13 @@
 // Simulação de um sistema de login
 
 const users = [
-  {username: "user1", password: 'password'},
-  {username: "user2", password: 'password'},
+  { username: "user1", password: 'password' },
+  { username: "user2", password: 'password' },
 ]
 
-function login(event){
+function login(event) {
   event.preventDefault()
 
-  const loginForm = document.getElementById("login-form")
   const username = document.getElementById("username").value
   const password = document.getElementById("password").value
 
@@ -18,11 +17,18 @@ function login(event){
 }
 
 
-function getUserInDB(username, password){
+function getUserInDB(username, password) {
   const userExists = users.find(user => user.username === username && user.password === password)
 
-  if(userExists){
+  // console.log(userExists)
+
+  if (userExists) {
     showSuccessToastAlert()
+
+    setTimeout(() => {
+      window.location.href = '../index.html'
+    }, 600);
+
   } else {
     showErrorAlertToast()
   }
