@@ -1,6 +1,5 @@
 const userDataArray = [];
 
-
 function submitRegisterForm(event) {
   // Fazendo o formulário não ter o comportamento padrão, que é de enviar
   event.preventDefault()
@@ -83,7 +82,6 @@ function submitRegisterForm(event) {
     submitButton.disabled = false;
   }, 4000);
 }
-
 
 function createUserSuccessToast() {
   Toastify({

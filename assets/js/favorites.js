@@ -25,7 +25,6 @@ function decreaseCount(button) {
   }
 }
 
-
 function showAlert() {
   const alertMessage = document.querySelector('.alert-message')
   alertMessage.classList.remove('hidden')

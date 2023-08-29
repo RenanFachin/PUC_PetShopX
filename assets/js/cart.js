@@ -1,3 +1,5 @@
+import { SuccessToastAlert } from './utils/toast/successToastAlert.js'
+
 // Variáveis de controle
 let totalCartItens = []
 
@@ -33,10 +35,7 @@ function addItemToCart(product) {
     updateBuyButton('buyButtonProduct8', totalProduct4)
   }
 
-  showSuccessToastAlert()
-
-
-  // console.log(totalCartItens)
+  new SuccessToastAlert("Produto adicionado ao carrinho!").showToast()
 }
 
 function updateBuyButton(buttonId, total) {
@@ -60,7 +59,6 @@ function updateCartButton() {
   `
 }
 
-
 // Trigger de "chamada" para o evento de clique em determinado botão
 let buyButtons = document.querySelectorAll('.buy-button')
 
@@ -72,21 +70,3 @@ buyButtons.forEach(function (button) {
     addItemToCart(productId)
   })
 })
-
-function showSuccessToastAlert() {
-  Toastify({
-    text: "Produto adicionado ao carrinho!",
-    duration: 2000,
-    gravity: "bottom",
-    position: "right",
-    stopOnFocus: true,
-    close: true,
-    offset: {
-      x: 50,
-      y: 10
-    },
-    style: {
-      background: "linear-gradient(to right, #6633cc, #a64dff)"
-    },
-  }).showToast()
-}

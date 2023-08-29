@@ -14,6 +14,7 @@ searchInput.addEventListener('input', function () {
   })
 })
 
+// Evento de click em qualquer lugar da dom
 document.addEventListener('click', function (event) {
   const isSearchInputClicked = event.target === searchInput
 
