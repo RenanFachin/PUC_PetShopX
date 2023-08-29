@@ -18,6 +18,8 @@ Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL.
 
 Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validações de dados com o auxilio da função `submitRegisterForm()`, esta função, simula uma conexão com um banco de dados, por isso o motivo do setTimeOut e do array de usuários. Mostra o toast de notificação quando o usuário preenche todos os dados corretamente.
 
+Para implementação dos toasts de notificação, foi utilizado além da Toastify-js os princípios da programação orientada à objetos para utilizar. Desta maneira foi diminuida a repetição de códigos na aplicação.
+
 
 <p align="center">
   <img src="./public/previewHomePage.PNG" alt="Exemplo da Aplicação em DarkMode">
