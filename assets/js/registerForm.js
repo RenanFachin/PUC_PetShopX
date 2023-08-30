@@ -4,6 +4,8 @@ import { validaUsername, passwordSecurity } from "./utils/inputPattern/validatio
 
 const userDataArray = []
 
+let checkBox1, checkBox2;
+
 const form = document.getElementById('formRegistration')
 
 form.addEventListener('submit', (event) => {
@@ -23,57 +25,66 @@ form.addEventListener('submit', (event) => {
 
   // Simulando um tempo de conexão com o database
   setTimeout(function () {
-    const username = document.getElementById('username').value
-    const cpf = document.getElementById('cpf').value
-    const email = document.getElementById('email').value
-    const birthday = document.getElementById('birthday').value
-    const phone = document.getElementById('phone').value
-    const password = document.getElementById('password').value
-    const confirmPassword = document.getElementById('confirmPassword').value
-    const checkBox1 = document.getElementById('check-box-1').checked
-    const checkBox2 = document.getElementById('check-box-2').checked
+    // Armazena em userData o retorno da função
+    const userData = checkInputValues()
 
-    // Validando que o usuário aceitou o "Li e estou de acordo com as regras do site"
-    if (!checkBox2) {
+    if (userData) {
+      // Adicionado ao array de usuários (simulando um db)
+      userDataArray.push(userData);
 
+      // Mensagem de sucesso
+      new SuccessToastAlert("Usuário cadastrado com sucesso!").showToast()
+
+      // se estiver tudo certo, mostrar o toast e resetar o formulário
+      cleanInput()
+
+      // Habilitando o botão novamente
       enablingSubmitButton()
-
-      return new ErrorToastAlert("É necessário estar de acordo com as políticas da empresa e de privacidade.").showToast()
     }
-
-    // Validando os campo sde entrada
-    if (password !== confirmPassword) {
-      return new ErrorToastAlert('Senha e confirmação de senha não são iguais.').showToast()
-    }
-
-    // Criando uma constante para receber o objeto(novo usuário)
-    const userData = {
-      username,
-      cpf,
-      email,
-      birthday,
-      phone,
-      password,
-      checkBox1,
-      checkBox2,
-      createdAt: new Date()
-    }
-
-    // Adicionado ao array de usuários (simulando um db)
-    userDataArray.push(userData);
-
-    // Mensagem de sucesso
-    new SuccessToastAlert("Usuário cadastrado com sucesso!").showToast()
-
-    // se estiver tudo certo, mostrar o toast e resetar o formulário
-    cleanInput()
-
-    // Habilitando o botão novamente
-    enablingSubmitButton()
-
   }, 4000);
 })
 
+function checkInputValues() {
+  const username = document.getElementById('username').value
+  const cpf = document.getElementById('cpf').value
+  const email = document.getElementById('email').value
+  const birthday = document.getElementById('birthday').value
+  const phone = document.getElementById('phone').value
+  const password = document.getElementById('password').value
+  const confirmPassword = document.getElementById('confirmPassword').value
+  checkBox1 = document.getElementById('check-box-1').checked
+  checkBox2 = document.getElementById('check-box-2').checked
+
+  if (!checkBox2) {
+    enablingSubmitButton()
+
+    return new ErrorToastAlert("É necessário estar de acordo com as políticas da empresa e de privacidade.").showToast()
+  }
+
+  const passwordSame = isPasswordMatch(password, confirmPassword)
+
+  if (!passwordSame) {
+    new ErrorToastAlert('Senha e confirmação de senha não são iguais.').showToast()
+    enablingSubmitButton()
+    return null;
+  }
+
+  return {
+    username,
+    cpf,
+    email,
+    birthday,
+    phone,
+    password,
+    checkBox1,
+    checkBox2,
+    createdAt: new Date()
+  };
+}
+
+function isPasswordMatch(password, confirmPassword) {
+  return password === confirmPassword;
+}
 
 function cleanInput() {
   document.getElementById('username').value = ''
