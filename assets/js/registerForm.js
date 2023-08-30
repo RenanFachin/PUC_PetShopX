@@ -52,19 +52,7 @@ form.addEventListener('submit', (event) => {
       return isUserCreated = false
     }
 
-    // Conferindo o que está chegando neste ponto
-    // console.log(`
-    //   username: ${username}, 
-    //   cpf: ${cpf}, 
-    //   e-mail: ${email}, 
-    //   data de nascimento: ${birthday},
-    //   telefone: ${phone}, 
-    //   senha: ${password}, 
-    //   confirmação de senha: ${confirmPassword}, 
-    //   check1: ${checkBox1}, 
-    //   check2: ${checkBox2}
-    // `)
-
+    // Criando uma constante para receber o objeto(novo usuário)
     const userData = {
       username,
       cpf,
@@ -80,11 +68,13 @@ form.addEventListener('submit', (event) => {
     // Adicionado ao array de usuários (simulando um db)
     userDataArray.push(userData);
 
+    // Mensagem de sucesso
     new SuccessToastAlert("Usuário cadastrado com sucesso!").showToast()
 
     // se estiver tudo certo, mostrar o toast e resetar o formulário
     cleanInput()
 
+    // Habilitando o botão novamente
     enablingSubmitButton()
   }, 4000);
 })
