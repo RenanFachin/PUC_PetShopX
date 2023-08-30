@@ -110,14 +110,15 @@
 
       <div class="flex flex-col">
         <p class="text-zinc-300 text-xs">Faça <a href="./loginForm.html"
-            class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">login</a> ou
+            class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">login</a>
+          ou
         </p>
-      
+
 
         <p class="text-zinc-300 text-xs">Faça <a href="./register.html"
-          class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">sua
-          conta</a>
-      </p>
+            class="text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md uppercase font-bold">sua
+            conta</a>
+        </p>
 
       </div>
 
@@ -128,10 +129,8 @@
 
 
     <main class="max-w-6xl mx-auto flex flex-col gap-10">
-      <!-- Produtos em destaque -->
       <section class="flex flex-col space-y-5 mb-10">
-        <form class="px-3 py-2 md:px-7 md:py-4 bg-slate-200/20 shadow-md gap-20 my-10  mx-auto"
-          onsubmit="submitRegisterForm(event)">
+        <form class="px-3 py-2 md:px-7 md:py-4 bg-slate-200/20 shadow-md gap-20 my-10  mx-auto" id="formRegistration">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bx-plus bx-sm text-violet-600'></i>
             <h2 class="text-2xl font-bold uppercase">Criar conta</h2>
@@ -170,7 +169,8 @@
               <!-- Input - Nome -->
               <div class="flex flex-col items-start gap-2 group">
                 <label for="birthday" class="sr-only">Data de nascimento: </label>
-                <input id="birthday" type="date" required placeholder="Data de nascimento*"
+                <input id="birthday" type="text" required
+                  placeholder="Data de nascimento*"
                   class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
               </div>
 
@@ -197,6 +197,7 @@
                 <input id="confirmPassword" type="password" required minlength="8" placeholder="Confirme sua senha*"
                   class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
               </div>
+
             </div>
 
             <p class="text-xs text-zinc-400">(*) Campos obrigatórios</p>
@@ -232,8 +233,7 @@
       </section>
     </main>
 
-    <footer
-      class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
+    <footer class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
       <!-- Logo -->
       <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -258,8 +258,31 @@
     </footer>
   </div>
 
-  <script src="../assets/js/registerForm.js"></script>
+  <script type="module" src="../assets/js/registerForm.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://unpkg.com/imask"></script>
+
+  <script>
+    const cpfInput = document.getElementById('cpf')
+    const cpfMask = IMask(cpfInput, {
+      mask: '000.000.000-00'
+    })
+
+    const birthdayInput = document.getElementById('birthday')
+    const dateMask = IMask(birthdayInput, {
+      mask: Date,
+      min: new Date(1990, 0, 1),
+      max: new Date(2023, 0, 1),
+      lazy: false
+    })
+
+    const phoneInput = document.getElementById('phone')
+    const phoneMask = IMask(phoneInput, {
+      mask: '(00) 0 0000-0000'
+    })
+
+
+  </script>
 </body>
 
 </html>

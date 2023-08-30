@@ -16,10 +16,9 @@ A geração dos elementos HTML dos cards de pets é tratada pela função `rende
 
 Para os detalhes do produto, a abordagem utiliza parâmetros de consulta na URL. Por exemplo, ao utilizar a URL `href="./pages/product.html?id=product4"`, o arquivo `productGeneratePage.js` captura os parâmetros de consulta e, com eles, percorre o objeto de produtos. A partir daí, os detalhes do produto são dinamicamente renderizados em tela. Isto aplica conceitos parecidos com o de uma SPA (single page application)
 
-Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validações de dados com o auxilio da função `submitRegisterForm()`, esta função, simula uma conexão com um banco de dados, por isso o motivo do setTimeOut e do array de usuários. Mostra o toast de notificação quando o usuário preenche todos os dados corretamente.
+Para a criaçaõ de usuário, fiz o uso do onSubmit do usuário e criei validações de dados com o auxilio da função `submitRegisterForm()`, esta função, simula uma conexão com um banco de dados, por isso o motivo do setTimeOut e do array de usuários. Mostra o toast de notificação quando o usuário preenche todos os dados corretamente. Além do toast, o formulário de cadastro conta com a criação de patterns para os inputs, utilizando a biblioteca iMask e também o uso de regex para fazer as validações.
 
 Para implementação dos toasts de notificação, foi utilizado além da Toastify-js os princípios da programação orientada à objetos para utilizar. Desta maneira foi diminuida a repetição de códigos na aplicação.
-
 
 <p align="center">
   <img src="./public/previewHomePage.PNG" alt="Exemplo da Aplicação">
@@ -73,6 +72,7 @@ Para implementação dos toasts de notificação, foi utilizado além da Toastif
 - [Como Usar](#como-usar)
 - [Adicionando novos pets](#adicionando-novos-pets)
 - [Adicionando novos produtos](#adicionando-novos-produtos)
+- [Validações](#validacoes)
 - [Autor](#autor)
 
 ## Estrutura de Pasta
@@ -116,6 +116,7 @@ Para implementação dos toasts de notificação, foi utilizado além da Toastif
 - **Tailwind CSS**: Um framework CSS utilitário que acelera o processo de estilização e torna as interfaces responsivas.
 - **Box icons**: Pacote de ícones utilizado no projeto.
 - **Toastify-js**: Biblioteca javascript para adicionar toast notifications à página.
+- **iMask**: Biblioteca de implementação de máscaras(patterns) para os inputs.
 
 
 ## Como Usar
@@ -190,6 +191,36 @@ const productsData = {
 ```
 
 Para adicionar um novo produto basta criar um novo objeto e adicionar as propriedades listadas acima e então, é só acessar `pages/product.html/id=NOMEDONOVOOBJETO`
+
+## Validacoes
+Todas validações e patterns de inputs foram criadas com expressões regulares (regex) e com a biblioteca iMask.
+
+```js
+// Máscara/validação de CPF
+mask: '000.000.000-00'
+
+// Máscara/validação de celular
+mask: '(00) 0 0000-0000'
+
+// Máscara/validação de data
+min: new Date(1990, 0, 1),
+max: new Date(2023, 0, 1),
+
+// Validação de username (não permite números)
+const usernameRegexPattern = /^([a-zA-Zà-úÀ-Ú]|\s+)+$/
+
+// Validação de segurança de senha
+// 8 caracteres, 1 letra maiúscula, 1 número e 1 simbolo
+const passwordRegexPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/
+
+// Validação de o usuário marcou a opção de 'Li e estou de acordo com as regras do site'
+const checkBox2 = document.getElementById('check-box-2').checked
+
+if(!checkBox2){
+  return new ErrorToastAlert("É necessário estar de acordo com as políticas da empresa e de privacidade.").showToast()
+}
+```
+
 
 ## Autor
 - [Renan Fachin](https://github.com/RenanFachin/)
