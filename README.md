@@ -22,9 +22,48 @@ Para implementação dos toasts de notificação, foi utilizado além da Toastif
 
 
 <p align="center">
-  <img src="./public/previewHomePage.PNG" alt="Exemplo da Aplicação em DarkMode">
+  <img src="./public/previewHomePage.PNG" alt="Exemplo da Aplicação">
 </p>
 
+<div style="display: flex; justify-content:center; gap: 20px">
+  <p width="50%">
+    <img src="./public/previewRegisterPage.PNG" alt="Exemplo da Aplicação">
+  </p>
+
+  <p width="50%">
+    <img src="./public/previewLoginForm.PNG" alt="Exemplo da Aplicação">
+  </p>
+</div>
+
+<div style="display: flex; justify-content:center; gap: 20px">
+  <p width="50%">
+    <img src="./public/previewProductPage.PNG" alt="Exemplo da Aplicação">
+  </p>
+
+  <p width="50%">
+    <img src="./public/previewProfile.PNG" alt="Exemplo da Aplicação">
+  </p>
+</div>
+
+<div style="display: flex; justify-content:center; gap: 20px">
+  <p width="50%">
+    <img src="./public/previewEditUserInfo.PNG" alt="Exemplo da Aplicação">
+  </p>
+
+  <p width="50%">
+    <img src="./public/previewMyPets.PNG" alt="Exemplo da Aplicação">
+  </p>
+</div>
+
+<div style="display: flex; justify-content:center; gap: 20px">
+  <p width="50%">
+    <img src="./public/previewMyPetsAddForm.PNG" alt="Exemplo da Aplicação">
+  </p>
+
+  <!-- <p width="50%">
+    <img src="./public/previewMyPets.PNG" alt="Exemplo da Aplicação">
+  </p> -->
+</div>
 
 ## Tabela de Conteúdos
 
