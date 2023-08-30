@@ -374,4 +374,4 @@ if (productId && productsData[productId]) {
   `
 }
 
-console.log(productsData)
+// console.log(productsData)

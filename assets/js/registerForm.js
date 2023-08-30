@@ -19,10 +19,7 @@ form.addEventListener('submit', (event) => {
   }
 
   // desabilitando o botão após o submit. Motivo: Usuários clicar várias vezes e fazer múltiplas chamadas
-  disablingSubmitButton(event)
-
-  // Variável de controle, se houver erros na validação, altero para false
-  let isUserCreated = true
+  disablingSubmitButton()
 
   // Simulando um tempo de conexão com o database
   setTimeout(function () {
@@ -46,10 +43,7 @@ form.addEventListener('submit', (event) => {
 
     // Validando os campo sde entrada
     if (password !== confirmPassword) {
-      new ErrorToastAlert('Senha e confirmação de senha não são iguais.').showToast()
-
-      // return para garantir que a função não vá seguir
-      return isUserCreated = false
+      return new ErrorToastAlert('Senha e confirmação de senha não são iguais.').showToast()
     }
 
     // Criando uma constante para receber o objeto(novo usuário)
@@ -76,6 +70,7 @@ form.addEventListener('submit', (event) => {
 
     // Habilitando o botão novamente
     enablingSubmitButton()
+
   }, 4000);
 })
 
@@ -93,13 +88,15 @@ function cleanInput() {
 }
 
 function enablingSubmitButton() {
+  const submitButton = document.getElementById('submitButtonForm')
+
   submitButton.innerHTML = '<i class="bx bx-edit-alt bx-sm"></i>CONTINUAR'
   submitButton.disabled = false
 }
 
-function disablingSubmitButton(event) {
-  const submitButton = event.target.querySelector('button[type="submit"]')
-  submitButton.disabled = true
+function disablingSubmitButton() {
+  const submitButton = document.getElementById('submitButtonForm')
 
+  submitButton.disabled = true
   submitButton.innerHTML = '<i class="bx bx-loader bx-spin"></i> Aguarde...'
 }

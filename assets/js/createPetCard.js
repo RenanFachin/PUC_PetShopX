@@ -93,4 +93,5 @@ function renderizarPetCard() {
   container.innerHTML = content
 }
 
+// Chamando a função ao iniciar a página
 renderizarPetCard()
