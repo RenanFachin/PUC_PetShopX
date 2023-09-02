@@ -21,7 +21,10 @@
         fontFamily: {
           'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
         },
-        extend: {
+        extends: {
+          boxShadow: {
+            'bg-shadowButton': '3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025), 8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035), 17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045), 36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055), 99px 72px 143px rgba(0, 0, 0, 0.08)',
+          },
         }
       }
     }
@@ -252,7 +255,8 @@
             </div>
 
             <button
-              class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md disabled:bg-zinc-400 disabled:text-white disabled:border-zinc-600 disabled:before:bg-zinc-500" type="button" id="addNewData">
+              class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md disabled:bg-zinc-400 disabled:text-white disabled:border-zinc-600 disabled:before:bg-zinc-500"
+              type="button" id="addNewData">
               <i class='bx bx-edit-alt bx-sm '></i>
               Alterar dados
             </button>
@@ -277,12 +281,12 @@
               <div class="flex flex-col items-center gap-2 t">
                 <div class="flex items-center gap-3">
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
@@ -304,12 +308,12 @@
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
@@ -331,12 +335,12 @@
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
@@ -358,12 +362,12 @@
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
                   <button
-                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                    class="flex flex-col justify-center items-center p-1 border-0 border-solid border-transparent bg-violet-800/5 transition-all duration-200 ease-linear hover:shadow-bg-shadowButton focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
@@ -373,7 +377,8 @@
               </div>
             </div>
 
-            <button class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md">
+            <button
+              class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md">
               <i class='bx bx-plus bx-sm'></i>
               Adicionar novo endereço
             </button>
@@ -404,7 +409,7 @@
                     Exceto domingo e feriados</p>
 
                   <button
-                    class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md"                    
+                    class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md"
                     type="button">
                     Iniciar atendimento
                   </button>
@@ -466,6 +471,18 @@
         <p class="text-zinc-400 text-xs md:text-sm">© 2023 - Todos os direitos reservados.</p>
         <p class="text-zinc-400 text-xs md:text-sm">Projeto criado com fins acadêmicos</p>
         <p class="text-zinc-400 text-xs md:text-sm">Elaborado por: Renan Fachin</p>
+
+        <a href="https://github.com/RenanFachin" target="_blank" rel="noopener noreferrer"
+          class="group border-none rounded-[50%] w-8 h-8 flex items-center justify-center duration-300 cursor-pointer relative overflow-hidden bg-violet-600 hover:w-32 hover:duration-300 hover:rounded-3xl">
+          <svg class="duration-300 fill-white group-hover:opacity-0 group-hover:duration-300" viewBox="0 0 496 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+            </path>
+          </svg>
+
+          <span
+            class="absolute text-white w-28 font-medium opacity-0 duration-300 group-hover:opacity-100 group-hover:duration-300 text-center text-sm">Github</span>
+        </a>
       </div>
     </footer>
   </div>

@@ -109,5 +109,5 @@ function disablingSubmitButton() {
   const submitButton = document.getElementById('submitButtonForm')
 
   submitButton.disabled = true
-  submitButton.innerHTML = '<i class="bx bx-loader bx-spin"></i> Aguarde...'
+  submitButton.innerHTML = '<i class="bx bx-loader bx-spin bx-sm"></i> Aguarde...'
 }
