@@ -16,6 +16,7 @@ animalCards.forEach(card => {
 })
 
 // Armazenando na constante addButton o elemento de id addButton da página e o formContainer também
+
 const addButton = document.getElementById('addButton')
 const formContainer = document.getElementById('formContainer')
 const dogButton = document.getElementById('dogButton')
@@ -41,6 +42,7 @@ function toggleAddButton() {
 
 addButton.addEventListener('click', () => {
   // O .value faz retornar o valor que consta no campo
+  const imagePet = document.getElementById('filePetUpload').value
   const petName = document.getElementById("petName").value
   const petBirthday = document.getElementById("petBirthday").value
   const petNickname = document.getElementById("nickname").value
@@ -54,7 +56,7 @@ addButton.addEventListener('click', () => {
   }
 
   // Debbuging -> vendo se estão chegando os dados dos campos de input
-  console.log(petName, petNickname, petBirthday, size, type)
+  console.log(imagePet, petName, petNickname, petBirthday, size, type)
 
   // Validação dos campos required
   if (petName === "" || petNickname === "" || petBirthday === "" || size === "") {
