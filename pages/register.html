@@ -45,7 +45,14 @@
         fontFamily: {
           'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
         },
-        extend: {}
+        extend: {
+          boxShadow: {
+            'customShadow': '0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);',
+          },
+          content: {
+            'effect': '',
+          },
+        }
       }
     }
   </script>
@@ -169,8 +176,7 @@
               <!-- Input - Nome -->
               <div class="flex flex-col items-start gap-2 group">
                 <label for="birthday" class="sr-only">Data de nascimento: </label>
-                <input id="birthday" type="text" required
-                  placeholder="Data de nascimento*"
+                <input id="birthday" type="text" required placeholder="Data de nascimento*"
                   class="w-full py-3 px-4 rounded-md bg-zinc-300/40 shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none">
               </div>
 
@@ -219,11 +225,12 @@
                 <i class='bx bx-sm bx-check absolute left-0 top-0 opacity-0 check-1 transition'></i>
               </label>
 
-              <span class="text-zinc-400 text-sm">Li e estou de acordo com as <a href="#" class="hover:text-violet-500">regras do site</a></span>
+              <span class="text-zinc-400 text-sm">Li e estou de acordo com as <a href="#"
+                  class="hover:text-violet-500">regras do site</a></span>
             </div>
 
             <button
-              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase disabled:bg-zinc-400 disabled:cursor-not-allowed font-bold"
+              class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-500 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-500 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:bg-zinc-400 disabled:cursor-not-allowed rounded-md"
               type="submit" id="submitButtonForm">
               <i class='bx bx-edit-alt bx-sm '></i>
               CONTINUAR

@@ -39,6 +39,8 @@
   <!-- BOX ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+  <script src="../../assets/js/utils/timeOutDisabledButton.js" defer></script>
+
 </head>
 
 <body>
@@ -113,11 +115,12 @@
               class="w-16 h-16 lg:w-32 lg:h-32 rounded-full object-cover" id="profile-image">
 
             <div class="flex flex-col flex-1 gap-6 items-center md:items-start">
-              <h3 class="text-xs md:text-sm text-center">Bem vindo,<strong class="text-md md:text-2xl ml-2">Renan Tavares Fachin</strong></h3>
+              <h3 class="text-xs md:text-sm text-center">Bem vindo,<strong class="text-md md:text-2xl ml-2">Renan
+                  Tavares Fachin</strong></h3>
 
 
               <!-- Flex-wrap para ele fazer a quebra automática da linha para quando não tiver mais espaçamento -->
-               <!-- Botões de edição de perfil na versão mobile -->
+              <!-- Botões de edição de perfil na versão mobile -->
               <div class="relative md:hidden" data-te-dropdown-ref>
                 <button
                   class="flex items-center whitespace-nowrap rounded bg-violet-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-violet-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-violet-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-violet-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
@@ -167,8 +170,8 @@
                   </li>
                   <li>
                     <button
-                      class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-smuppercase md:min-w-1/2 uppercase w-full" data-te-dropdown-item-ref
-                      type="button">
+                      class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-smuppercase md:min-w-1/2 uppercase w-full"
+                      data-te-dropdown-item-ref type="button">
                       Ver meus pets
                     </button>
                   </li>
@@ -218,7 +221,8 @@
 
         <!-- Local onde estão os dados do usuário -> Todos os inputs estão com value adicionado pois é para simular como se todos os dados estivessem sendo consumidos de um banco de dados próprio -->
         <section class="grid grid-cols-1 gap-10 lg:grid-cols-2">
-          <div class="w-full bg-zinc-300/20 shadow-md px-6 py-10 flex flex-col gap-7 max-h-[570px] text-sm lg:text-base">
+          <div
+            class="w-full bg-zinc-300/20 shadow-md px-6 py-10 flex flex-col gap-7 max-h-[570px] text-sm lg:text-base">
             <!-- Input - Nome -->
             <div class="flex flex-col items-start gap-2 group">
               <label for="username" class="text-violet-400">Nome completo: </label>
@@ -248,8 +252,7 @@
             </div>
 
             <button
-              class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase"
-              onclick="window.location.href =  '../cart.html'" type="button">
+              class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md disabled:bg-zinc-400 disabled:text-white disabled:border-zinc-600 disabled:before:bg-zinc-500" type="button" id="addNewData">
               <i class='bx bx-edit-alt bx-sm '></i>
               Alterar dados
             </button>
@@ -273,16 +276,19 @@
 
               <div class="flex flex-col items-center gap-2 t">
                 <div class="flex items-center gap-3">
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
 
-                <button class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">PRINCIPAL</button>
+                <button
+                  class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">PRINCIPAL</button>
               </div>
             </div>
 
@@ -297,16 +303,19 @@
 
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
 
-                <button class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
+                <button
+                  class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
               </div>
             </div>
 
@@ -321,16 +330,19 @@
 
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
 
-                <button class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
+                <button
+                  class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
               </div>
             </div>
 
@@ -345,18 +357,26 @@
 
               <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-3">
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-edit-alt bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
 
-                  <button class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
+                  <button
+                    class="focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">
                     <i class='bx bx-trash bx-sm lg:bx-md text-zinc-900'></i>
                   </button>
                 </div>
 
-                <button class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
+                <button
+                  class="font-bold text-violet-600 focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-1 outline-none">DEFINIR</button>
               </div>
             </div>
+
+            <button class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md">
+              <i class='bx bx-plus bx-sm'></i>
+              Adicionar novo endereço
+            </button>
           </div>
         </section>
 
@@ -379,11 +399,12 @@
               <div
                 class="bg-[#9F75FF]/5 py-4 px-6 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full">
                 <div class="flex flex-col gap-5 text-zinc-500">
-                  <p class="text-zinc-500 text-center text-sm lg:text-base">Segunda à sábado das 8:00 às 20:00. Horário de Brasília (UTC -3).
+                  <p class="text-zinc-500 text-center text-sm lg:text-base">Segunda à sábado das 8:00 às 20:00. Horário
+                    de Brasília (UTC -3).
                     Exceto domingo e feriados</p>
 
                   <button
-                    class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase min-w-1/2"
+                    class="relative tracking-widest uppercase text-center font-bold py-3 px-5 flex items-center justify-center gap-5 outline-none text-violet-500 border-2 border-violet-500 shadow-customShadow transition-all duration-300 ease-linear z-10 before:transition-all before:duration-300 before:ease-linear before:absolute before:top-0 before:bottom-0 before:left-1/2 before:right-1/2 before:opacity-0 before:content-[''] before:-z-10 before:bg-violet-500 hover:text-white focus:text-white hover:before:transition-all hover:before:duration-300 hover:before:ease-linear hover:before:left-0 hover:before:right-0 hover:before:opacity-100 focus:before:transition-all focus:before:duration-500 focus:before:ease-linear focus:before:left-0 focus:before:right-0 focus:before:opacity-100 active:scale-90 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:ring-offset-2 focus-within:rounded-md disabled:cursor-not-allowed rounded-md"                    
                     type="button">
                     Iniciar atendimento
                   </button>
@@ -405,7 +426,8 @@
               <div
                 class="bg-[#9F75FF]/5 py-4 px-6 flex items-center rounded-lg border-2 border-violet-200 justify-between w-full">
                 <div class="flex flex-col gap-5 text-zinc-500">
-                  <p class="text-zinc-500 text-center text-sm lg:text-base">Segunda à sábado das 8:00 às 20:00. Horário de Brasília (UTC -3).
+                  <p class="text-zinc-500 text-center text-sm lg:text-base">Segunda à sábado das 8:00 às 20:00. Horário
+                    de Brasília (UTC -3).
                     Exceto domingo e feriados</p>
 
                   <strong
