@@ -194,11 +194,13 @@
                     </button>
                   </li>
                   <li>
+
                     <button
                       class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm uppercase md:min-w-1/2 w-full"
-                      type="button" data-te-dropdown-item-ref onclick="window.location.href =  './myPets.html'">
+                      type="button" data-te-dropdown-item-ref>
                       Adicionar pet
                     </button>
+
                   </li>
                   <li>
                     <button
@@ -225,7 +227,7 @@
                     Alterar senha
                   </button>
 
-                  <a href="./myPets.html"
+                  <a href="#addpetSection"
                     class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2 uppercase md:min-w-1/2"
                     type="button">
                     Adicionar pet
@@ -255,7 +257,7 @@
           </div>
         </section>
 
-        <section class="flex flex-col items-start gap-5">
+        <section id="addpetSection" class="flex flex-col items-start gap-5">
           <div class="flex items-center justify-center gap-4">
             <i class='bx bxs-cat bx-md text-violet-500'></i>
             <h3 class="text-lg lg:text-2xl uppercase font-bold">Adicionar PET</h3>
@@ -324,13 +326,59 @@
 
                 <div class="flex flex-col w-full gap-1 ">
                   <label for="size" class="text-violet-400 text-xs">Porte</label>
-                  <select id="size"
-                    class="py-3 px-4 rounded-md bg-[#9F75FF]/5   shadow-sm text-zinc-500 group-focus-within:ring-2 group-focus-within:ring-violet-400 group-focus-within:rounded-md group-focus-within:ring-offset-2 outline-none"
-                    required>
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                  </select>
+                  <div class="flex">
+                    <div class="inline-flex items-center">
+                      <label class="relative flex cursor-pointer items-center rounded-full p-3" for="pequeno"
+                        data-ripple-dark="true">
+                        <input id="pequeno" name="size" type="radio" value="Pequeno"
+                          class="before:content[''] peer relative h-5 w-5 cursor-pointer bg-white appearance-none rounded-full border text-violet-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:opacity-0 before:transition-opacity checked:border-violet-500 checked:before:bg-violet-500 hover:before:opacity-10" />
+                        <div
+                          class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-violet-500 opacity-0 transition-opacity peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </div>
+                      </label>
+                      <label class="mt-px cursor-pointer select-none font-light text-gray-700" for="pequeno">
+                        Pequeno
+                      </label>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <label class="relative flex cursor-pointer items-center rounded-full p-3" for="medio"
+                        data-ripple-dark="true">
+                        <input id="medio" name="size" type="radio" value="Médio"
+                          class="before:content[''] peer relative h-5 w-5 cursor-pointer bg-white appearance-none rounded-full border text-violet-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:opacity-0 before:transition-opacity checked:border-violet-500 checked:before:bg-violet-500 hover:before:opacity-10" />
+                        <div
+                          class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-violet-500 opacity-0 transition-opacity peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </div>
+                      </label>
+                      <label class="mt-px cursor-pointer select-none font-light text-gray-700" for="medio">
+                        Médio
+                      </label>
+                    </div>
+                    <div class="inline-flex items-center">
+                      <label class="relative flex cursor-pointer items-center rounded-full p-3" for="grande"
+                        data-ripple-dark="true">
+                        <input id="grande" name="size" type="radio" value="Grande"
+                          class="before:content[''] peer relative h-5 w-5 cursor-pointer bg-white appearance-none rounded-full border text-violet-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:opacity-0 before:transition-opacity checked:border-violet-500 checked:before:bg-violet-500 hover:before:opacity-10" />
+                        <div
+                          class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-violet-500 opacity-0 transition-opacity peer-checked:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16"
+                            fill="currentColor">
+                            <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                          </svg>
+                        </div>
+                      </label>
+                      <label class="mt-px cursor-pointer select-none font-light text-gray-700" for="grande">
+                        Grande
+                      </label>
+                    </div>
+                  </div>
                 </div>
 
 
@@ -389,6 +437,8 @@
   <script src="../../assets/js/createPetCard.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
 </body>
 
 </html>

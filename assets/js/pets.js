@@ -46,8 +46,13 @@ addButton.addEventListener('click', () => {
   const petName = document.getElementById("petName").value
   const petBirthday = document.getElementById("petBirthday").value
   const petNickname = document.getElementById("nickname").value
-  const size = document.getElementById("size").value
+  // const size = document.getElementById("size").value
+ 
+  const size= document.querySelector('input[name="size"]:checked').value;
+
+
   let type
+
 
   if (dogButton.classList.contains('active')) {
     type = 'Cachorro'
@@ -65,3 +70,4 @@ addButton.addEventListener('click', () => {
     new SuccessToastAlert("Pet adicionado com sucesso!").showToast()
   }
 })
+
