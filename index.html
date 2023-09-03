@@ -11,17 +11,6 @@
   <!-- Script para adicionar tailwindcss ao projeto -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- script para extender algumas estilizações default do tailwindCSS -->
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-        },
-        extend: {}
-      }
-    }
-  </script>
 
   <!-- Link para o cdn do google para buscar fontes externas -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,26 +21,64 @@
   <!-- BOX ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .textStroke {
+        -webkit-text-stroke: 1px #8b5cf6;
+      }
+      #heartcontainer input:checked ~ svg {
+        fill: #E3474F;
+        stroke: transparent;
+      }
+    }
+  </style>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        },
+        extend: {
+          dropShadow: {
+            '3xl': '0 0 15px #8b5cf6',
+          }
+        }
+      }
+    }
+  </script>
+
 </head>
 
 <body>
   <div class="min-h-screen max-w-[100vw] bg-zinc-100">
     <header
       class="max-w-full px-10 py-2 lg:px-40 lg:py-6 bg-zinc-200/20 flex items-center justify-between md:justify-evenly shadow-md gap-3 md:gap-0">
-      <!-- Logo -->
-      <a href="/index.html"
-        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
-        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_27_868)">
-            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
-              fill="#9F75FF" />
-          </g>
-          <defs>
-            <clipPath id="clip0_27_868">
-              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
-            </clipPath>
-          </defs>
-        </svg>
+      <a data-text="Awesome" type="button" href="/index.html" aria-label="Logo PETSHOP-X"
+        class="tracking-wider text-xl relative uppercase group m-0 h-auto bg-transparent p-0 textStroke border-solid text-transparent outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-400 focus:rounded-md">
+        <span class="actual-text">&nbsp;PETSHOPX&nbsp;</span>
+
+        <div class="flex items-center justify-center">
+          <span
+            class="absolute box-border content-[attr(data-text)] text-violet-500 w-0 inset-0 border-r-4 border-solid border-r-violet-500 overflow-hidden duration-500 group-hover:w-[100%] group-hover:drop-shadow-3xl textStroke"
+            aria-hidden="true">&nbsp;PETSHOPX&nbsp;</span>
+
+          <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="group-hover:drop-shadow-3xl textStroke">
+            <g clip-path="url(#clip0_27_868)">
+              <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+                fill="#9F75FF" />
+            </g>
+            <defs>
+              <clipPath id="clip0_27_868">
+                <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+
       </a>
 
       <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
@@ -105,12 +132,13 @@
         </ul>
       </div>
 
-      <a href="./pages/myFavorites.html"
+      <a href="./pages/myFavorites.html" aria-label="Botão que redireciona para página de meus favoritos"
         class="hidden xl:block text-sm text-zinc-400 hover:text-zinc-500 outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">Meus
         favoritos
       </a>
 
-      <button class="hidden md:block" id="cartButton" onclick="redirectToRandomPage()" type="button">
+      <button class="hidden md:block" id="cartButton" onclick="redirectToRandomPage()" type="button"
+        aria-label="Botão de meus pedidos, apresenta a quantidade adicionado em seu carrinho">
         <div
           class="bg-violet-500 text-white py-3 flex items-center justify-center gap-5 px-5 outline-none hover:bg-violet-600 text-sm group focus-within:ring-2 focus-within:ring-violet-400 focus-within:rounded-md rounded-md p-0.5 focus-within:ring-offset-2">
           <i class='bx bx-sm bx-cart'></i>
@@ -122,10 +150,12 @@
 
       <a href="./pages/user/profile.html"
         class="hidden lg:block cursor-pointer hover:scale-125 transition-all outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-full">
-        <img src="http://github.com/RenanFachin.png" alt="Foto de perfil do usuário" class="w-12 h-12 rounded-full">
+        <img src="http://github.com/RenanFachin.png" alt="Foto de perfil do usuário" class="w-12 h-12 rounded-full"
+          aria-label="Imagem de perfil do usuário">
       </a>
 
-      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2">
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2"
+        aria-label="Botão de logout">
         <i class='bx bx-log-out bx-sm text-zinc-300 hover:text-zinc-500 cursor-pointer'></i>
       </a>
     </header>
@@ -190,9 +220,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product1" class="">
               <img src="./assets/images/racao1.png" alt="Imagem produto" class="max-w-[120px] max-h-[230px]">
@@ -214,9 +251,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product2" class="">
               <img src="./assets/images/ração-seca-2.png" alt="Imagem produto" class="">
@@ -238,9 +282,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product3" class="">
               <img src="./assets/images/racao-umida-1.png" alt="Imagem produto" class="">
@@ -262,9 +313,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] opacity-60 relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product4" class="">
               <img src="./assets/images/racao-umida-2.png" alt="Imagem produto" class="">
@@ -290,9 +348,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product1" class="">
               <img src="./assets/images/racao1.png" alt="Imagem produto" class="max-w-[120px] max-h-[230px]">
@@ -314,9 +379,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product2" class="">
               <img src="./assets/images/ração-seca-2.png" alt="Imagem produto" class="">
@@ -338,9 +410,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product3" class="">
               <img src="./assets/images/racao-umida-1.png" alt="Imagem produto" class="">
@@ -362,9 +441,16 @@
           <div
             class="flex flex-col gap-4 items-center justify-between bg-white px-5 pt-14 pb-8 rounded-md max-h-[470px] opacity-60 relative">
 
-            <button class="absolute right-6 top-6">
-              <i class='bx bx-heart bx-sm'></i>
-            </button>
+            <label class="absolute right-6 top-6 cursor-pointer" id="heartcontainer">
+              <input type="checkbox" class="absolute opacity-0 cursor-pointer h-0 w-0">
+              <svg class="relative top-0 left-0 h-6 w-6 transition-all fill-transparent hover:scale-110 stroke-black" id="Layer_1"
+                version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
 
             <a href="./pages/product.html?id=product4" class="">
               <img src="./assets/images/racao-umida-2.png" alt="Imagem produto" class="">
@@ -389,7 +475,8 @@
 
     <footer class="max-w-full px-5 md:px-40 py-6 bg-zinc-300/20 flex items-center justify-around shadow-md mt-10">
       <!-- Logo -->
-      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
+      <a href="#" class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md"
+        aria-label="Logomarca do PetshopX">
         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_27_868)">
             <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
@@ -411,7 +498,8 @@
 
         <a href="https://github.com/RenanFachin" target="_blank" rel="noopener noreferrer"
           class="group border-none rounded-[50%] w-8 h-8 flex items-center justify-center duration-300 cursor-pointer relative overflow-hidden bg-violet-600 hover:w-32 hover:duration-300 hover:rounded-3xl">
-          <svg class="duration-300 fill-white group-hover:opacity-0 group-hover:duration-300" viewBox="0 0 496 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+          <svg class="duration-300 fill-white group-hover:opacity-0 group-hover:duration-300" viewBox="0 0 496 512"
+            height="1em" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
             </path>

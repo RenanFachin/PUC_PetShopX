@@ -11,6 +11,14 @@
   <!-- Script para adicionar tailwindcss ao projeto -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .textStroke {
+        -webkit-text-stroke: 1px #8b5cf6;
+      }
+    }
+  </style>
+
   <!-- script para extender algumas estilizações default do tailwindCSS -->
   <script>
     tailwind.config = {
@@ -27,6 +35,9 @@
               '70%, 75%': { transform: 'scale(1.3) rotate(270deg)' },
               '95%, 100%': { transform: 'scale(1) rotate(360deg)' },
             }
+          },
+          dropShadow: {
+            '3xl': '0 0 15px #8b5cf6',
           }
         }
       }
@@ -39,6 +50,8 @@
 
   <!-- BOX ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  
+
 
 </head>
 
@@ -47,19 +60,30 @@
     <header
       class="max-w-full px-10 py-2 lg:px-40 lg:py-6 bg-zinc-200/20 flex items-center justify-between md:justify-evenly shadow-md gap-3 md:gap-0">
       <!-- Logo -->
-      <a href="/index.html"
-        class="outline-none focus:ring-violet-400 focus:ring-2 focus:ring-offset-2 focus:rounded-md">
-        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_27_868)">
-            <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
-              fill="#9F75FF" />
-          </g>
-          <defs>
-            <clipPath id="clip0_27_868">
-              <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
-            </clipPath>
-          </defs>
-        </svg>
+      <a data-text="Awesome" type="button" href="/index.html" aria-label="Logo PETSHOP-X"
+        class="tracking-wider text-xl relative uppercase group m-0 h-auto bg-transparent p-0 textStroke border-solid text-transparent outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-400 focus:rounded-md">
+        <span class="actual-text">&nbsp;PETSHOPX&nbsp;</span>
+
+        <div class="flex items-center justify-center">
+          <span
+            class="absolute box-border content-[attr(data-text)] text-violet-500 w-0 inset-0 border-r-4 border-solid border-r-violet-500 overflow-hidden duration-500 group-hover:w-[100%] group-hover:drop-shadow-3xl textStroke"
+            aria-hidden="true">&nbsp;PETSHOPX&nbsp;</span>
+
+          <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="group-hover:drop-shadow-3xl textStroke">
+            <g clip-path="url(#clip0_27_868)">
+              <path d="M15.076 1.09753L27.722 8.39871V23.0011L15.076 30.3023L2.42998 23.0011V8.39871L15.076 1.09753Z"
+                fill="#9F75FF" />
+            </g>
+            <defs>
+              <clipPath id="clip0_27_868">
+                <rect width="30" height="30" fill="white" transform="translate(0.473633 0.699951)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+
       </a>
 
       <!-- Input de busca, do tipo texto. Está com uma div por volta para facilitar adicionar um ícone -->
