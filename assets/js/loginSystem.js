@@ -18,7 +18,7 @@ form.addEventListener('submit', (event) => {
 
 
     setTimeout(() => {
-      window.location.href = '../index.html'
+      window.location.href = 'https://renanfachin.github.io/PUC_PetShopX/'
     }, 600);
 
   } else {
