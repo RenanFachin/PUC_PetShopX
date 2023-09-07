@@ -50,11 +50,11 @@ function updateBuyButton(buttonId, total) {
 }
 
 function updateCartButton() {
-  let cartButton = document.getElementById('cartButton')
+  let cartButtonQuantidade = document.getElementById('cartButtonQuantidade')
 
   // Atualizando na página o valor total de itens no carrinho
-  cartButton.innerHTML = `
-  <i class='bx bx-sm bx-cart'></i>
+  cartButtonQuantidade.innerHTML = `
+
   Meus pedidos (${totalCartItens.length})
   `
 }
